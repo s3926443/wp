@@ -1,1 +1,24 @@
 /* Insert your styles here */
+html {
+    min-width: 350px;
+    max-width: 1500px;
+    margin: auto;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+
+h1{
+    font-family: 'Libre Baskerville', serif;
+}
+/* Header Styles 4.1 */
+header div {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+}
+
+header div img {
+    max-height: 35px;
+}
