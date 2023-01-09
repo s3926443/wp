@@ -17,7 +17,7 @@
   <body>
 
     <header>
-      <div><h1>lunardo cinema<br /><img src="../../Media/Cinema_logo.png" alt=""></h1></div>
+      <div><h1>lunardo cinema<br /><img src="../../media/cinema_logo.png" alt=""></h1></div>
     </header>
 
     <nav>
