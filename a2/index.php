@@ -20,25 +20,32 @@
 
   <header>
     <div>
-      <h1>Lunardo Cinema<br /><img src="../../media/cinema_logo.png" alt=""></h1>
+      <h1><img src="../../media/cinema_logo.png" alt=""><br />Lunardo Cinema</h1>
     </div>
   </header>
 
   <nav>
     <div>
       <ul>
-        <li>About Us</li>
-        <li>Seats & Prices</li>
-        <li>Now Showing</li>
+        <li><a href="#about-us">About Us</a></li>
+        <li><a href="#seats-and-prices">Seats & Prices</a></li>
+        <li><a href="#now-showing">Now Showing</a></li>
       </ul>
     </div>
   </nav>
 
   <main>
-    <article id='Website Under Construction'>
-      <!-- Creative Commons image sourced from https://pixabay.com/en/maintenance-under-construction-2422173/ and used for educational purposes only -->
-      <img src='../../media/website-under-construction.png' alt='Website Under Construction' />
-    </article>
+    <div class="about-us" id="about-us">
+      <h2>About Us</h2>
+      <p>
+        Here at Lunardo we take pride in offering a truly immersive cinematic experience perfect for any viewer
+        whether you are a movie buff or just going out with friends or family.
+        <br /><br />
+        d
+      </p>
+    </div>
+    <div class="seats-and-prices" id="seats-and-prices"></div>
+    <div class="now-showing" id="now-showing"></div>
   </main>
 
   <footer>

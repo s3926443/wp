@@ -9,7 +9,7 @@ body {
     margin: 0;
 }
 
-h1 {
+h1, h2, h3 {
     font-family: 'Libre Baskerville', serif;
 }
 
@@ -44,3 +44,18 @@ nav li {
     font-weight: 600;
     padding: 20px;
 }
+
+nav a:link {
+    text-decoration: none;
+    color: #000;
+}
+
+nav a:visited {
+    color: #000;
+}
+
+nav a:hover {
+    color: #7200a4;
+}
+
+/* Main styles 4.3 */
