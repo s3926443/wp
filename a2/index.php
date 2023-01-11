@@ -39,9 +39,12 @@
       <h2>About Us</h2>
       <p>
         Here at Lunardo we take pride in offering a truly immersive cinematic experience perfect for any viewer
-        whether you are a movie buff or just going out with friends or family.
+        whether you are a movie buff or just going out with friends or family. 
         <br /><br />
-        d
+        We are happy to announce that we have now just reopened with extensive improvements and renovations to again
+        provide an amazing experience to all movie goers. Among the improvements you will be happy to hear we have new 
+        and improved seating which not only includes standard seats but also brand new reclinable first class seats for
+        maximum comfort.
       </p>
     </div>
     <div class="seats-and-prices" id="seats-and-prices"></div>
