@@ -35,19 +35,35 @@
   </nav>
 
   <main>
-    <div class="about-us" id="about-us">
+    <div>
+      <a class="about-us" id="about-us"></a>
       <h2>About Us</h2>
       <p>
         Here at Lunardo we take pride in offering a truly immersive cinematic experience perfect for any viewer
-        whether you are a movie buff or just going out with friends or family. 
+        whether you are a movie buff or just going out with friends or family.
         <br /><br />
         We are happy to announce that we have now just reopened with extensive improvements and renovations to again
-        provide an amazing experience to all movie goers. Among the improvements you will be happy to hear we have new 
-        and improved seating which not only includes standard seats but also brand new reclinable first class seats for
+        provide an amazing experience to all movie goers. Among the improvements you will be happy to hear we have new
+        and improved seating which not only includes standard seats but also brand new reclinable first class seats
+        for
         maximum comfort.
+        <br /><br />
+        We have also fitten each and everyone one of our theatres with upgraded Dolby Atmos Sound and 3D Dolby Vision,
+        providing again a truly immersive experience.
+
       </p>
     </div>
-    <div class="seats-and-prices" id="seats-and-prices"></div>
+    <div>
+      <a class="seats-and-prices" id="seats-and-prices"></a>
+      <h2>Seats & Prices</h2>
+      <div>
+        <img class="seat" src="../../media/Profern-Standard-Twin.png"
+          alt="image of the profern standard twin movie seat">
+      </div>
+      <div>
+        <img class="seat" src="../../media/Profern-Verona-Twin.png" alt="imgae of the profern verona twin movie seat">
+      </div>
+    </div>
     <div class="now-showing" id="now-showing"></div>
   </main>
 
