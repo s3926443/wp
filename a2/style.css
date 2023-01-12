@@ -40,7 +40,7 @@ nav {
     top: 0;
 }
 
-a.about-us-anchor, a.seats-and-prices-anchor {
+a.about-us-anchor, a.seats-and-prices-anchor, a.now-showing-anchor {
     display: block; 
     position: relative; 
     top: -55px; 
@@ -125,5 +125,35 @@ td {
 
 .discount {
     text-align: center;
+    font-weight: 600;
+}
+
+/* Now showing styles 4.3.3 */
+.movie-section {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.movie-panel {
+    text-align: left;
+    display: inline-block;
+    max-height: 400px;
+    margin: 10px;
+    background-color: #00A472;
+    border-radius: 10px;
+    min-width: 500px;
+}
+
+.movie-panel img {
+    max-height: 400px;
+    display: inline-block;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.movie-panel p {
+    display: inline-block;
+    vertical-align: top;
     font-weight: 600;
 }

@@ -53,6 +53,7 @@
 
       </p>
     </div>
+
     <div class="seats-and-prices">
       <a class="seats-and-prices-anchor" id="seats-and-prices"></a>
       <h2>Seats & Prices</h2>
@@ -72,6 +73,7 @@
           <p>Profern Verona</p>
         </div>
       </div>
+
       <h3>Our Prices</h3>
       <table>
         <tr>
@@ -121,9 +123,54 @@
         Discounted pricing is available all weekdays 12:00pm to 5:00pm and all day Monday
       </p>
     </div>
+
     <div class="now-showing">
-      
+      <a class="now-showing-anchor" id="now-showing"></a>
+      <h2>Now Showing</h2>
+      <div class="movie-section">
+        <div class="movie-panel">
+          <div class="front">
+            <img src="../../media/avatar-poster.png">
+            <p>
+              Avatar: The Way Of Water
+              <br />
+              Rating: M
+            </p>
+          </div>
+        </div>
+        <div class="movie-panel">
+          <div class="front">
+            <img src="../../media/puss-poster.png">
+            <p>
+              Puss In Boots: The Last Wish
+              <br />
+              Rating: PG
+            </p>
+          </div>
+        </div>
+        <div class="movie-panel">
+          <div class="front">
+            <img src="../../media/margrete-poster.png">
+            <p>
+              Margrete: Queen of the North
+              <br />
+              Rating: MA15+
+            </p>
+          </div>
+        </div>
+        <div class="movie-panel">
+          <div class="front">
+            <img src="../../media/weird-poster.png">
+            <p>
+              Weird: The Al Yankovic story
+              <br />
+              Rating: Unrated
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
+
   </main>
 
   <footer>
