@@ -140,10 +140,10 @@ td {
 
 .movie-panel {
     text-align: left;
-    max-height: 400px;
+    height: 400px;
     margin: 10px;
     background-color: transparent;
-    min-width: 500px;
+    width: 500px;
     perspective: 1000px;
 }
 
@@ -173,11 +173,15 @@ td {
     z-index: 2;
 }
 
+.front p{
+    text-align: center;
+}
+
 .back {
     transform: rotateY(180deg);
 }
 
-.movie-panel img {
+.poster {
     max-height: 400px;
     display: inline-block;
     border-radius: 10px 0px 0px 10px;
@@ -189,12 +193,7 @@ td {
     font-weight: 600;
 }
 
-.front {
-    background-color: #00A472;
-    border-radius: 10px;
-}
-
-.back {
+.front, .back {
     background-color: #00A472;
     border-radius: 10px;
 }
@@ -211,5 +210,74 @@ td {
 .booking ul {
     list-style-type: none;
     font-weight: 600;
+}
+
+.booking-button {
+    text-align: center;
+}
+
+.booking-button button{
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+    background-color: #00aad4;
+    text-align: center;
+    box-shadow: 2px 2px;
+}
+
+.booking-button button:hover {
+    background-color: #0093b8;
+}
+
+.booking-button button:active {
+    background-color: #00aad4;
+    box-shadow: 1px 1px;
+    transform: translateY(1px);
+    transform: translateX(1px);
+}
+
+.rating {
+    display: inline-block;
+    max-width: 40px;
+    border-radius: 0px;
+    
+}
+
+/* due to flex box tablet works as intended without a media query */
+
+@media screen and (max-width: 500px) {
+
+    .poster {
+        border-radius: 0px 0px 10px 10px;
+        bottom: 0;
+        right: 0;
+        position:absolute;
+    }
+
+    .movie-panel, .front, .back {
+        max-width: 272px;
+        height: 516px;
+    }
+
+    .front {
+        text-align: center;
+    }
+
+    .movie-panel p {
+        height: 84px;
+        vertical-align: top;
+        position: relative;
+    }
+
+    .synopsis{
+      height: 50%;  
+    } 
+}
+
+/* footer styles 4.4*/
+footer {
+    background-color: #00A472;
+    border-radius: 10px 10px 0px 0px;
+    margin-top: 50px;
+    padding: 15px 15px 10px 15px;
 }
 

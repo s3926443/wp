@@ -128,17 +128,16 @@
       <a class="now-showing-anchor" id="now-showing"></a>
       <h2>Now Showing</h2>
       <div class="movie-section">
-
-
         <div class="movie-panel">
           <div class="inner">
             <div class="front">
-              <img src="../../media/avatar-poster.png">
+              <img class="poster" src="../../media/avatar-poster.png">
               <p>
                 Avatar: The Way Of Water
-                <br />
-                Rating: M
+                <br /><br />
+                <img class="rating" src="../../media/m-rating.png" alt="M">
               </p>
+              
             </div>
             <div class="back">
               <div class="synopsis">
@@ -149,20 +148,28 @@
                   work with Neytiri and the army of the Na'vi race to protect their home.
                 </p>
               </div>
-              <div class="booking"></div>
+              <div class="booking">
+                <h3>Bookings Times</h3>
+                <ul>
+                  <li>Mon-Tue - 9pm</li>
+                  <li>Wed-Fri - 9pm</li>
+                  <li>Sat-Sun - 6pm</li>
+                </ul>
+              </div>
+              <div class="booking-button">
+                <a href="./booking.php"><button>Book Now</button></a>
+              </div>
             </div>
           </div>
         </div>
-
-
         <div class="movie-panel">
           <div class="inner">
             <div class="front">
-              <img src="../../media/puss-poster.png">
+              <img class="poster" src="../../media/puss-poster.png">
               <p>
                 Puss In Boots: The Last Wish
-                <br />
-                Rating: PG
+                <br /><br />
+                <img class="rating" src="../../media/pg-rating.png" alt="PG">
               </p>
             </div>
             <div class="back">
@@ -174,6 +181,17 @@
                   mythical Last Wish and restore his nine lives.
                 </p>
               </div>
+              <div class="booking">
+                <h3>Bookings Times</h3>
+                <ul>
+                  <li>Mon-Tue - 12pm</li>
+                  <li>Wed-Fri - 6pm</li>
+                  <li>Sat-Sun - 12pm</li>
+                </ul>
+              </div>
+              <div class="booking-button">
+                <a href="./booking.php"><button>Book Now</button></a>
+              </div>
             </div>
           </div>
         </div>
@@ -181,11 +199,11 @@
         <div class="movie-panel">
           <div class="inner">
             <div class="front">
-              <img src="../../media/margrete-poster.png">
+              <img class="poster" src="../../media/margrete-poster.png" alt="margrete queen of the north poster">
               <p>
                 Margrete: Queen of the North
-                <br />
-                Rating: MA15+
+                <br /><br />
+                <img class="rating" src="../../media/ma15.png" alt="MA15+">
               </p>
             </div>
             <div class="back">
@@ -197,6 +215,17 @@
                   could shatter her life's work: the Kalmar Union.
                 </p>
               </div>
+              <div class="booking">
+                <h3>Bookings Times</h3>
+                <ul>
+                  <li>Mon-Tue - 6pm</li>
+                  <li>Wed-Fri - No Showings</li>
+                  <li>Sat-Sun - 10pm</li>
+                </ul>
+              </div>
+              <div class="booking-button">
+                <a href="./booking.php"><button>Book Now</button></a>
+              </div>
             </div>
           </div>
         </div>
@@ -204,11 +233,11 @@
         <div class="movie-panel">
           <div class="inner">
             <div class="front">
-              <img src="../../media/weird-poster.png">
+              <img class="poster" src="../../media/weird-poster.png">
               <p>
                 Weird: The Al Yankovic story
-                <br />
-                Rating: Unrated
+                <br /><br />
+                Unrated
               </p>
             </div>
             <div class="back">
@@ -226,6 +255,9 @@
                   <li>Wed-Fri - 12pm</li>
                   <li>Sat-Sun - 3pm</li>
                 </ul>
+              </div>
+              <div class="booking-button">
+                <a href="./booking.php"><button>Book Now</button></a>
               </div>
             </div>
           </div>
