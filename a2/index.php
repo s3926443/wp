@@ -53,21 +53,77 @@
 
       </p>
     </div>
-    <div>
+    <div class="seats-and-prices">
       <a class="seats-and-prices-anchor" id="seats-and-prices"></a>
       <h2>Seats & Prices</h2>
-      <div>
-        <div>
+      <p>
+        We now have two new seats in our theatres. One being the Profern Standard which is included in our Standard
+        tickets,
+        and the other being the Profern Verona which is included with the First class tickets
+      </p>
+      <div class="image-section">
+        <div class="seat-container">
           <img class="seat" src="../../media/Profern-Standard-Twin.png"
             alt="image of the profern standard twin movie seat">
+          <p>Profern Standard</p>
         </div>
-        <div>
+        <div class="seat-container">
           <img class="seat" src="../../media/Profern-Verona-Twin.png" alt="imgae of the profern verona twin movie seat">
+          <p>Profern Verona</p>
         </div>
       </div>
-
+      <h3>Our Prices</h3>
+      <table>
+        <tr>
+          <th>Seat Type</th>
+          <th>Seat Code</th>
+          <th>Discounted Prices</th>
+          <th>Normal Prices</th>
+        </tr>
+        <tr>
+          <td>Standard Adult</td>
+          <td>STA</td>
+          <td>$16.00</td>
+          <td>$21.50
+        </tr>
+        <tr>
+          <td>Standard Concession</td>
+          <td>STP</td>
+          <td>$14.50</td>
+          <td>$19.00</td>
+        </tr>
+        <tr>
+          <td>Standard Child</td>
+          <td>STC</td>
+          <td>$13.00</td>
+          <td>$17.50</td>
+        </tr>
+        <tr>
+          <td>First Class Adult</td>
+          <td>FCP</td>
+          <td>$25.00</td>
+          <td>$31.00</td>
+        </tr>
+        <tr>
+          <td>First Class Concession</td>
+          <td>FCP</td>
+          <td>$23.50</td>
+          <td>$28.00</td>
+        </tr>
+        <tr>
+          <td>First Class Child</td>
+          <td>FCC</td>
+          <td>$22.00</td>
+          <td>$25.00</td>
+        </tr>
+      </table>
+      <p class="discount">
+        Discounted pricing is available all weekdays 12:00pm to 5:00pm and all day Monday
+      </p>
     </div>
-    <div class="now-showing" id="now-showing"></div>
+    <div class="now-showing">
+      
+    </div>
   </main>
 
   <footer>

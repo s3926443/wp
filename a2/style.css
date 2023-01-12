@@ -40,14 +40,7 @@ nav {
     top: 0;
 }
 
-a.about-us-anchor {
-    display: block; 
-    position: relative; 
-    top: -55px; 
-    visibility: hidden;
-}
-
-a.seats-and-prices-anchor {
+a.about-us-anchor, a.seats-and-prices-anchor {
     display: block; 
     position: relative; 
     top: -55px; 
@@ -95,6 +88,42 @@ nav a:hover {
 /* About us styles 4.3.1 */
 
 /* seats and prices styles 4.3.2 */
+.image-section {
+    text-align: center;
+}
+
+.seat-container {
+    display: inline-block;
+    min-width: 49%;
+    text-align: center;
+    font-weight: 600;
+}
+
 .seat {
-    height: 300px;
+    max-height: 350px;
+    margin: auto;
+}
+
+.seats-and-prices h3 {
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+}
+
+th {
+    background-color: #00A472;
+    padding: 10px;
+}
+
+td {
+    white-space: nowrap;
+    padding: 5px;
+}
+
+.discount {
+    text-align: center;
+    font-weight: 600;
 }
