@@ -128,44 +128,106 @@
       <a class="now-showing-anchor" id="now-showing"></a>
       <h2>Now Showing</h2>
       <div class="movie-section">
+
+
         <div class="movie-panel">
-          <div class="front">
-            <img src="../../media/avatar-poster.png">
-            <p>
-              Avatar: The Way Of Water
-              <br />
-              Rating: M
-            </p>
+          <div class="inner">
+            <div class="front">
+              <img src="../../media/avatar-poster.png">
+              <p>
+                Avatar: The Way Of Water
+                <br />
+                Rating: M
+              </p>
+            </div>
+            <div class="back">
+              <div class="synopsis">
+                <h3>Synopsis</h3>
+                <p>
+                  Jake Sully lives with his newfound family formed on the extrasolar moon Pandora.
+                  Once a familiar threat returns to finish what was previously started, Jake must
+                  work with Neytiri and the army of the Na'vi race to protect their home.
+                </p>
+              </div>
+              <div class="booking"></div>
+            </div>
           </div>
         </div>
+
+
         <div class="movie-panel">
-          <div class="front">
-            <img src="../../media/puss-poster.png">
-            <p>
-              Puss In Boots: The Last Wish
-              <br />
-              Rating: PG
-            </p>
+          <div class="inner">
+            <div class="front">
+              <img src="../../media/puss-poster.png">
+              <p>
+                Puss In Boots: The Last Wish
+                <br />
+                Rating: PG
+              </p>
+            </div>
+            <div class="back">
+              <div class="synopsis">
+                <h3>Synopsis</h3>
+                <p>
+                  Puss in Boots discovers that his passion for adventure has taken its toll: he has
+                  burned through eight of his nine lives. Puss sets out on an epic journey to find the
+                  mythical Last Wish and restore his nine lives.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
+
         <div class="movie-panel">
-          <div class="front">
-            <img src="../../media/margrete-poster.png">
-            <p>
-              Margrete: Queen of the North
-              <br />
-              Rating: MA15+
-            </p>
+          <div class="inner">
+            <div class="front">
+              <img src="../../media/margrete-poster.png">
+              <p>
+                Margrete: Queen of the North
+                <br />
+                Rating: MA15+
+              </p>
+            </div>
+            <div class="back">
+              <div class="synopsis">
+                <h3>Synopsis</h3>
+                <p>
+                  1402. Queen Margrete is ruling Sweden, Norway and Denmark through her adopted son, Erik.
+                  But a conspiracy is in the making and Margrete finds herself in an impossible dilemma that
+                  could shatter her life's work: the Kalmar Union.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
+
         <div class="movie-panel">
-          <div class="front">
-            <img src="../../media/weird-poster.png">
-            <p>
-              Weird: The Al Yankovic story
-              <br />
-              Rating: Unrated
-            </p>
+          <div class="inner">
+            <div class="front">
+              <img src="../../media/weird-poster.png">
+              <p>
+                Weird: The Al Yankovic story
+                <br />
+                Rating: Unrated
+              </p>
+            </div>
+            <div class="back">
+              <div class="synopsis">
+                <h3>Synopsis</h3>
+                <p>
+                  Explores every facet of Yankovic's life, from his meteoric rise to fame with early hits like
+                  'Eat It' and 'Like a Surgeon' to his torrid celebrity love affairs and famously depraved lifestyle.
+                </p>
+              </div>
+              <div class="booking">
+                <h3>Bookings Times</h3>
+                <ul>
+                  <li>Mon-Tue - No Showings</li>
+                  <li>Wed-Fri - 12pm</li>
+                  <li>Sat-Sun - 3pm</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -38,6 +38,7 @@ nav {
     border-radius: 0px 0px 7.5px 7.5px;
     position: sticky;
     top: 0;
+    z-index: 1;
 }
 
 a.about-us-anchor, a.seats-and-prices-anchor, a.now-showing-anchor {
@@ -90,6 +91,7 @@ nav a:hover {
 /* seats and prices styles 4.3.2 */
 .image-section {
     text-align: center;
+    z-index: 0;
 }
 
 .seat-container {
@@ -138,12 +140,41 @@ td {
 
 .movie-panel {
     text-align: left;
-    display: inline-block;
     max-height: 400px;
     margin: 10px;
-    background-color: #00A472;
-    border-radius: 10px;
+    background-color: transparent;
     min-width: 500px;
+    perspective: 1000px;
+}
+
+.movie-panel:focus .inner, .movie-panel:hover .inner {
+    transform: rotateY(180deg);
+}
+
+.movie-panel, .front, .back {
+    width: 500px;
+    height: 400px;
+}
+
+.inner {
+    transition: 1s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.front, .back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.front {
+    z-index: 2;
+}
+
+.back {
+    transform: rotateY(180deg);
 }
 
 .movie-panel img {
@@ -157,3 +188,28 @@ td {
     vertical-align: top;
     font-weight: 600;
 }
+
+.front {
+    background-color: #00A472;
+    border-radius: 10px;
+}
+
+.back {
+    background-color: #00A472;
+    border-radius: 10px;
+}
+
+.synopsis, .booking {
+    width: 75%;
+    margin: auto;
+}
+
+.synopsis h3, .booking h3 {
+    margin-bottom: 0px;
+}
+
+.booking ul {
+    list-style-type: none;
+    font-weight: 600;
+}
+
