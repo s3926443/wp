@@ -40,14 +40,14 @@ nav {
     top: 0;
 }
 
-a.about-us {
+a.about-us-anchor {
     display: block; 
     position: relative; 
     top: -55px; 
     visibility: hidden;
 }
 
-a.seats-and-prices {
+a.seats-and-prices-anchor {
     display: block; 
     position: relative; 
     top: -55px; 
@@ -90,4 +90,11 @@ nav a:hover {
 /* Main styles 4.3 */
 .about-us, .seats-and-prices, .now-showing {
     max-height: 100%;
+}
+
+/* About us styles 4.3.1 */
+
+/* seats and prices styles 4.3.2 */
+.seat {
+    height: 300px;
 }

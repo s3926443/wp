@@ -36,7 +36,7 @@
 
   <main>
     <div>
-      <a class="about-us" id="about-us"></a>
+      <a class="about-us-anchor" id="about-us"></a>
       <h2>About Us</h2>
       <p>
         Here at Lunardo we take pride in offering a truly immersive cinematic experience perfect for any viewer
@@ -54,15 +54,18 @@
       </p>
     </div>
     <div>
-      <a class="seats-and-prices" id="seats-and-prices"></a>
+      <a class="seats-and-prices-anchor" id="seats-and-prices"></a>
       <h2>Seats & Prices</h2>
       <div>
-        <img class="seat" src="../../media/Profern-Standard-Twin.png"
-          alt="image of the profern standard twin movie seat">
+        <div>
+          <img class="seat" src="../../media/Profern-Standard-Twin.png"
+            alt="image of the profern standard twin movie seat">
+        </div>
+        <div>
+          <img class="seat" src="../../media/Profern-Verona-Twin.png" alt="imgae of the profern verona twin movie seat">
+        </div>
       </div>
-      <div>
-        <img class="seat" src="../../media/Profern-Verona-Twin.png" alt="imgae of the profern verona twin movie seat">
-      </div>
+
     </div>
     <div class="now-showing" id="now-showing"></div>
   </main>
