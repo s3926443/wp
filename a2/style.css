@@ -374,25 +374,40 @@ input[type="radio"] {
 
 input[type="radio"]:checked + .session {
     background-color: #00c78b;
-    transform: translateX(3px);
-    transform: translateY(3px);
+    transform: translateX(3px) translateY(3px);
     box-shadow: 2px 2px #00835c;
 }
 
-/*input[type=radio] {
-    padding: 35px;
-    margin: 10px;
-    appearance: none;
-    outline-offset: 0.1em;
-    background-color: #00A472;
-    border-radius: 10px;
-    box-shadow: 2px 2px #006e4d;
+.user-details {
+    margin:auto;
+    width: 30%;
+    text-align: left;
 }
 
-input[type=radio]:checked {
-    display:inline-block;
-    transform: translateY(1px);
-    transform: translateX(1px);
-    box-shadow: 1px 1px #006e4d;
-    background-color: #00bb83;
-}*/
+.user-details input[type="text"] {
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: #006e4d41;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    margin-top: 20px;
+    padding: 20px;
+    width: 100px;
+    background-color: #00A472;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    box-shadow: 3px 3px #00835c;
+}
+
+input[type="submit"]:hover {
+    background-color: #00835c;
+}
+
+input[type="submit"]:active {
+    background-color: #00c78b;
+    box-shadow: 1px 1px #00835c;
+    transform: translateX(2px) translateY(2px);
+}

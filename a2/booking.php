@@ -56,9 +56,9 @@
       allowfullscreen>
     </iframe>
 
-    <form>
+    <form action="./booking.php" method="post">
       <h2>Book Here</h2>
-      
+
       <input type="hidden" id="movieName" name="movie" value="ACT">
 
       <h3>Adult</h3>
@@ -162,22 +162,43 @@
       <input type="radio" name="day" id="WED" value="WED" data-pricing="fullprice">
       <label class="session" for="WED">WEDNESDAY<br>9PM</label>
       <input type="radio" name="day" id="THU" value="THU" data-pricing="fullprice">
-      <label class="session" for="THU">THURSDAY<BR>9PM</label>
+      <label class="session" for="THU">THURSDAY<br>9PM</label>
       <input type="radio" name="day" id="FRI" value="FRI" data-pricing="fullprice">
-      <label class="session" for="FRI">FRIDAY<BR>9PM</label>
+      <label class="session" for="FRI">FRIDAY<br>9PM</label>
       <input type="radio" name="day" id="SAT" value="SAT" data-pricing="fullprice">
-      <label class="session" for="SAT">SATURDAY<BR>6PM</label>
+      <label class="session" for="SAT">SATURDAY<br>6PM</label>
       <input type="radio" name="day" id="SUN" value="SUN" data-pricing="fullprice">
-      <label class="session" for="SUN">SUNDAY<BR>6PM</label>
+      <label class="session" for="SUN">SUNDAY<br>6PM</label>
 
+      <h3>Your Details</h3>
+      <div class="user-details">
+        <label for="userName">Your Name:</label><br>
+        <input type="text" name="user[name]" id="userName" required><br>
+        <label for="email">Your Email:</label><br>
+        <input type="text" name="user[email]" id="email" required><br>
+        <label for="mobile"> Your Phone Number:</label><br>
+        <input type="text" name="user[mobile]" id="mobile" required><br>
+      </div>
 
+      <input type="submit" value="Book">
     </form>
   </main>
   <footer>
+    <div class="contact-wrapper">
+      <div class=" contact">
+        <p>Email: Lunardo@Lunardo.com.au</p>
+      </div>
+      <div class="contact">
+        <p>Mobile: 0404123456</p>
+      </div>
+      <div class="contact">
+        <p>Address: 10 George street, Sydney, 2000</p>
+      </div>
+    </div>
     <div>&copy;
       <script>
         document.write(new Date().getFullYear());
-      </script> Put your name(s), student number(s) and group name here. Last modified <?= date("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.
+      </script> Mitchell Waghorn, s3629443 <a href="https://github.com/s3926443/wp">github</a>. Last modified <?= date("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.
     </div>
     <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web
       Programming course at RMIT University in Melbourne, Australia.</div>
