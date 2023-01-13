@@ -72,12 +72,12 @@ nav a {
     transition: color 0.25s;
 }
 
-nav a:link {
+a:link {
     text-decoration: none;
     color: #000;
 }
 
-nav a:visited {
+a:visited {
     color: #000;
 }
 

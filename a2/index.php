@@ -17,10 +17,10 @@
 </head>
 
 <body>
-
+  
   <header>
     <div>
-      <h1><img src="../../media/cinema_logo.png" alt=""><br />Lunardo Cinema</h1>
+      <h1><img src="../../media/cinema_logo.png" alt=""><br>Lunardo Cinema</h1>
     </div>
   </header>
 
@@ -41,13 +41,13 @@
       <p>
         Here at Lunardo we take pride in offering a truly immersive cinematic experience perfect for any viewer
         whether you are a movie buff or just going out with friends or family.
-        <br /><br />
+        <br><br>
         We are happy to announce that we have now just reopened with extensive improvements and renovations to again
         provide an amazing experience to all movie goers. Among the improvements you will be happy to hear we have new
         and improved seating which not only includes standard seats but also brand new reclinable first class seats
         for
         maximum comfort.
-        <br /><br />
+        <br><br>
         We have also fitten each and everyone one of our theatres with upgraded Dolby Atmos Sound and 3D Dolby Vision,
         providing again a truly immersive experience.
 
@@ -131,10 +131,10 @@
         <div class="movie-panel">
           <div class="inner">
             <div class="front">
-              <img class="poster" src="../../media/avatar-poster.png">
+              <img class="poster" src="../../media/avatar-poster.png" alt="Avatar the way of water movie poster">
               <p>
                 Avatar: The Way Of Water
-                <br /><br />
+                <br><br>
                 <img class="rating" src="../../media/m-rating.png" alt="M">
               </p>
 
@@ -157,7 +157,7 @@
                 </ul>
               </div>
               <div class="booking-button">
-                <a href="./booking.php"><button>Book Now</button></a>
+                <button ><a href="./booking.php">Book Now</a></button>
               </div>
             </div>
           </div>
@@ -165,10 +165,10 @@
         <div class="movie-panel">
           <div class="inner">
             <div class="front">
-              <img class="poster" src="../../media/puss-poster.png">
+              <img class="poster" src="../../media/puss-poster.png" alt="puss in boots the last wish poster">
               <p>
                 Puss In Boots: The Last Wish
-                <br /><br />
+                <br><br>
                 <img class="rating" src="../../media/pg-rating.png" alt="PG">
               </p>
             </div>
@@ -190,7 +190,7 @@
                 </ul>
               </div>
               <div class="booking-button">
-                <a href="./booking.php"><button>Book Now</button></a>
+                <button><a href="./booking.php">Book Now</a></button>
               </div>
             </div>
           </div>
@@ -202,7 +202,7 @@
               <img class="poster" src="../../media/margrete-poster.png" alt="margrete queen of the north poster">
               <p>
                 Margrete: Queen of the North
-                <br /><br />
+                <br><br>
                 <img class="rating" src="../../media/ma15.png" alt="MA15+">
               </p>
             </div>
@@ -224,7 +224,7 @@
                 </ul>
               </div>
               <div class="booking-button">
-                <a href="./booking.php"><button>Book Now</button></a>
+                <button><a href="./booking.php">Book Now</a></button>
               </div>
             </div>
           </div>
@@ -233,10 +233,10 @@
         <div class="movie-panel">
           <div class="inner">
             <div class="front">
-              <img class="poster" src="../../media/weird-poster.png">
+              <img class="poster" src="../../media/weird-poster.png" alt="weird the al yankovic poster">
               <p>
                 Weird: The Al Yankovic story
-                <br /><br />
+                <br><br>
                 Unrated
               </p>
             </div>
@@ -257,7 +257,7 @@
                 </ul>
               </div>
               <div class="booking-button">
-                <a href="./booking.php"><button>Book Now</button></a>
+                <button><a href="./booking.php">Book Now</a></button>
               </div>
             </div>
           </div>
