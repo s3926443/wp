@@ -137,7 +137,7 @@
                 <br /><br />
                 <img class="rating" src="../../media/m-rating.png" alt="M">
               </p>
-              
+
             </div>
             <div class="back">
               <div class="synopsis">
@@ -264,14 +264,24 @@
         </div>
       </div>
     </div>
-
   </main>
-
   <footer>
+    <div class="contact-wrapper">
+      <div class=" contact">
+        <p>Email: Lunardo@Lunardo.com.au</p>
+      </div>
+      <div class="contact">
+        <p>Mobile: 0404123456</p>
+      </div>
+      <div class="contact">
+        <p>Address: 10 George street, Sydney, 2000</p>
+      </div>
+    </div>
     <div>&copy;
       <script>
         document.write(new Date().getFullYear());
-      </script> Mitchell Waghorn, s3926443. Last modified <?= date("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.
+      </script> Mitchell Waghorn, s3926443. <a href="https://github.com/s3926443/wp" target="_blank">github</a> Last
+      modified <?= date("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.
     </div>
     <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web
       Programming course at RMIT University in Melbourne, Australia.</div>

@@ -86,8 +86,6 @@ nav a:hover {
     max-height: 100%;
 }
 
-/* About us styles 4.3.1 */
-
 /* seats and prices styles 4.3.2 */
 .image-section {
     text-align: center;
@@ -279,5 +277,44 @@ footer {
     border-radius: 10px 10px 0px 0px;
     margin-top: 50px;
     padding: 15px 15px 10px 15px;
+}
+
+.contact-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.contact {
+    display: inline-block;
+    width: 30%;
+    margin: auto;
+    font-weight: 600;
+}
+
+/* booking page styles */
+
+.movie-info p, .movie-info img {
+    display: inline-block;
+}
+
+.movie-info p {
+    width: 95%;
+}
+
+iframe {
+    width: 100%;
+    height: 600px;
+}
+
+main ul {
+    padding: 0px;
+}
+
+main li {
+    list-style: none;
+    display: inline-block;
+    padding-right: 20px;
+    font-weight: 600;
 }
 
