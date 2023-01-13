@@ -274,7 +274,7 @@
         <p>Mobile: 0404123456</p>
       </div>
       <div class="contact">
-        <p>Address: 10 George street, Sydney, 2000</p>
+        <p>10 George street, Sydney, 2000</p>
       </div>
     </div>
     <div>&copy;

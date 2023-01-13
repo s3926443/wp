@@ -296,13 +296,14 @@ footer {
 
 .contact-wrapper {
     display: flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: space-around;
     text-align: center;
 }
 
 .contact {
     display: inline-block;
-    width: 30%;
+    width: 34%;
     margin: auto;
     font-weight: 600;
 }
