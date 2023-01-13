@@ -10,7 +10,9 @@ body {
     margin: 0px 15px;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: 'Libre Baskerville', serif;
 }
 
@@ -41,10 +43,12 @@ nav {
     z-index: 1;
 }
 
-a.about-us-anchor, a.seats-and-prices-anchor, a.now-showing-anchor {
-    display: block; 
-    position: relative; 
-    top: -55px; 
+a.about-us-anchor,
+a.seats-and-prices-anchor,
+a.now-showing-anchor {
+    display: block;
+    position: relative;
+    top: -55px;
     visibility: hidden;
 }
 
@@ -82,7 +86,9 @@ nav a:hover {
 }
 
 /* Main styles 4.3 */
-.about-us, .seats-and-prices, .now-showing {
+.about-us,
+.seats-and-prices,
+.now-showing {
     max-height: 100%;
 }
 
@@ -145,11 +151,14 @@ td {
     perspective: 1000px;
 }
 
-.movie-panel:focus .inner, .movie-panel:hover .inner {
+.movie-panel:focus .inner,
+.movie-panel:hover .inner {
     transform: rotateY(180deg);
 }
 
-.movie-panel, .front, .back {
+.movie-panel,
+.front,
+.back {
     width: 500px;
     height: 400px;
 }
@@ -160,7 +169,8 @@ td {
     position: relative;
 }
 
-.front, .back {
+.front,
+.back {
     backface-visibility: hidden;
     position: absolute;
     top: 0;
@@ -171,7 +181,7 @@ td {
     z-index: 2;
 }
 
-.front p{
+.front p {
     text-align: center;
 }
 
@@ -191,17 +201,20 @@ td {
     font-weight: 600;
 }
 
-.front, .back {
+.front,
+.back {
     background-color: #00A472;
     border-radius: 10px;
 }
 
-.synopsis, .booking {
+.synopsis,
+.booking {
     width: 75%;
     margin: auto;
 }
 
-.synopsis h3, .booking h3 {
+.synopsis h3,
+.booking h3 {
     margin-bottom: 0px;
 }
 
@@ -214,7 +227,7 @@ td {
     text-align: center;
 }
 
-.booking-button button{
+.booking-button button {
     padding: 10px 20px 10px 20px;
     border-radius: 5px;
     background-color: #00aad4;
@@ -237,7 +250,7 @@ td {
     display: inline-block;
     max-width: 40px;
     border-radius: 0px;
-    
+
 }
 
 /* due to flex box tablet works as intended without a media query */
@@ -248,10 +261,12 @@ td {
         border-radius: 0px 0px 10px 10px;
         bottom: 0;
         right: 0;
-        position:absolute;
+        position: absolute;
     }
 
-    .movie-panel, .front, .back {
+    .movie-panel,
+    .front,
+    .back {
         max-width: 272px;
         height: 516px;
     }
@@ -266,9 +281,9 @@ td {
         position: relative;
     }
 
-    .synopsis{
-      height: 50%;  
-    } 
+    .synopsis {
+        height: 50%;
+    }
 }
 
 /* footer styles 4.4*/
@@ -294,7 +309,8 @@ footer {
 
 /* booking page styles */
 
-.movie-info p, .movie-info img {
+.movie-info p,
+.movie-info img {
     display: inline-block;
 }
 
@@ -318,3 +334,65 @@ main li {
     font-weight: 600;
 }
 
+/* form styling 5.1 */
+
+form {
+    text-align: center;
+}
+
+form label,
+form select {
+    padding-right: 5px;
+    font-weight: 600;
+}
+
+form select{
+    background-color: #006e4d41;
+    border-radius: 5px;
+    padding: 5px 0px 5px 0px;
+}
+
+.session {
+    vertical-align: middle;
+}
+
+
+.session {
+    display: inline-block;
+    background-color: #00A472;
+    width: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0px 10px 0px 10px;
+    box-shadow: 5px 5px#00835c;
+    font-weight: 600;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]:checked + .session {
+    background-color: #00c78b;
+    transform: translateX(3px);
+    transform: translateY(3px);
+    box-shadow: 2px 2px #00835c;
+}
+
+/*input[type=radio] {
+    padding: 35px;
+    margin: 10px;
+    appearance: none;
+    outline-offset: 0.1em;
+    background-color: #00A472;
+    border-radius: 10px;
+    box-shadow: 2px 2px #006e4d;
+}
+
+input[type=radio]:checked {
+    display:inline-block;
+    transform: translateY(1px);
+    transform: translateX(1px);
+    box-shadow: 1px 1px #006e4d;
+    background-color: #00bb83;
+}*/

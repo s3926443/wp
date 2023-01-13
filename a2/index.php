@@ -90,7 +90,7 @@
         </tr>
         <tr>
           <td>Standard Concession</td>
-          <td>STP</td>
+          <td>FCA</td>
           <td>$14.50</td>
           <td>$19.00</td>
         </tr>
@@ -102,7 +102,7 @@
         </tr>
         <tr>
           <td>First Class Adult</td>
-          <td>FCP</td>
+          <td>FCA</td>
           <td>$25.00</td>
           <td>$31.00</td>
         </tr>

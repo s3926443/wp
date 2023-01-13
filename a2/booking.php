@@ -55,6 +55,123 @@
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       allowfullscreen>
     </iframe>
+
+    <form>
+      <h2>Book Here</h2>
+      
+      <input type="hidden" id="movieName" name="movie" value="ACT">
+
+      <h3>Adult</h3>
+      <label for="seatsSta">Standard:</label>
+      <select name="seats[STA]" id="seatsSta" data-fullprice="21.5" data-discprice="16">
+        <option value="">Please Select</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+
+      <label for="seatsFca">First Class:</label>
+      <select name="seats[FCA]" id="seatsFca" data-fullprice="31" data-discprice="25">
+        <option value="">Please Select</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+
+      <h3>Concession</h3>
+      <label for="seatsStp">Standard:</label>
+      <select name="seats[STP]" id="seatsStp" data-fullprice="19" data-discprice="14.5">
+        <option value="">Please Select</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+
+      <label for="seatsFcp">First Class:</label>
+      <select name="seats[FCP]" id="seatsFcp" data-fullprice="28" data-discprice="23.5">
+        <option value="">Please Select</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+
+      <h3>Child</h3>
+      <label for="seatsStc">Standard:</label>
+      <select name="seats[STC]" id="seatsStc" data-fullprice="17.5" data-discprice="13">
+        <option value="">Please Select</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+
+      <label for="seatsFcc">First Class:</label>
+      <select name="seats[FCC]" id="seatsFcc" data-fullprice="25" data-discprice="22">
+        <option value="">Please Select</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+
+      <h3>Session</h3>
+      <input type="radio" name="day" id="MON" value="MON" data-pricing="discprice">
+      <label class="session" for="MON">MONDAY<br>9PM</label>
+      <input type="radio" name="day" id="TUE" value="TUE" data-pricing="fullprice">
+      <label class="session" for="TUE">TUESDAY<br>9PM</label>
+      <input type="radio" name="day" id="WED" value="WED" data-pricing="fullprice">
+      <label class="session" for="WED">WEDNESDAY<br>9PM</label>
+      <input type="radio" name="day" id="THU" value="THU" data-pricing="fullprice">
+      <label class="session" for="THU">THURSDAY<BR>9PM</label>
+      <input type="radio" name="day" id="FRI" value="FRI" data-pricing="fullprice">
+      <label class="session" for="FRI">FRIDAY<BR>9PM</label>
+      <input type="radio" name="day" id="SAT" value="SAT" data-pricing="fullprice">
+      <label class="session" for="SAT">SATURDAY<BR>6PM</label>
+      <input type="radio" name="day" id="SUN" value="SUN" data-pricing="fullprice">
+      <label class="session" for="SUN">SUNDAY<BR>6PM</label>
+
+
+    </form>
   </main>
   <footer>
     <div>&copy;
