@@ -1,0 +1,414 @@
+html {
+    min-width: 460px;
+    max-width: 1200px;
+    margin: auto;
+    font-family: 'Quicksand', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0px 15px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Libre Baskerville', serif;
+}
+
+/* Header Styles 4.1 */
+header {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    background-color: #00A472;
+    border-radius: 7.5px 7.5px 0px 0px;
+}
+
+header h1 {
+    margin-bottom: 0;
+    padding-top: 15px;
+}
+
+header img {
+    max-height: 35px;
+}
+
+/* Nav Bar Styles 4.2 */
+nav {
+    background-color: #00A472;
+    border-radius: 0px 0px 7.5px 7.5px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+a.about-us-anchor,
+a.seats-and-prices-anchor,
+a.now-showing-anchor {
+    display: block;
+    position: relative;
+    top: -55px;
+    visibility: hidden;
+}
+
+nav div {
+    display: table;
+    margin: auto;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    font-weight: 600;
+    padding: 20px;
+}
+
+nav a {
+    transition: color 0.25s;
+}
+
+a:link {
+    text-decoration: none;
+    color: #000;
+}
+
+a:visited {
+    color: #000;
+}
+
+nav a:hover {
+    color: #7200a4;
+}
+
+/* Main styles 4.3 */
+.about-us,
+.seats-and-prices,
+.now-showing {
+    max-height: 100%;
+}
+
+/* seats and prices styles 4.3.2 */
+.image-section {
+    text-align: center;
+    z-index: 0;
+}
+
+.seat-container {
+    display: inline-block;
+    min-width: 49%;
+    text-align: center;
+    font-weight: 600;
+}
+
+.seat {
+    max-height: 350px;
+    margin: auto;
+}
+
+.seats-and-prices h3 {
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+}
+
+th {
+    background-color: #00A472;
+    padding: 10px;
+}
+
+td {
+    white-space: nowrap;
+    padding: 5px;
+}
+
+.discount {
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Now showing styles 4.3.3 */
+.movie-section {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.movie-panel {
+    text-align: left;
+    height: 400px;
+    margin: 10px;
+    background-color: transparent;
+    width: 500px;
+    perspective: 1000px;
+}
+
+.movie-panel:focus .inner,
+.movie-panel:hover .inner {
+    transform: rotateY(180deg);
+}
+
+.movie-panel,
+.front,
+.back {
+    width: 500px;
+    height: 400px;
+}
+
+.inner {
+    transition: 1s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.front,
+.back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.front {
+    z-index: 2;
+}
+
+.front p {
+    text-align: center;
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.poster {
+    max-height: 400px;
+    display: inline-block;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.movie-panel p {
+    display: inline-block;
+    vertical-align: top;
+    font-weight: 600;
+}
+
+.front,
+.back {
+    background-color: #00A472;
+    border-radius: 10px;
+}
+
+.synopsis,
+.booking {
+    width: 75%;
+    margin: auto;
+}
+
+.synopsis h3,
+.booking h3 {
+    margin-bottom: 0px;
+}
+
+.booking ul {
+    list-style-type: none;
+    font-weight: 600;
+}
+
+.booking-button {
+    text-align: center;
+}
+
+.booking-button button {
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+    background-color: #00aad4;
+    text-align: center;
+    box-shadow: 2px 2px;
+}
+
+.booking-button button:hover {
+    background-color: #0093b8;
+}
+
+.booking-button button:active {
+    background-color: #00aad4;
+    box-shadow: 1px 1px;
+    transform: translateY(1px);
+    transform: translateX(1px);
+}
+
+.rating {
+    display: inline-block;
+    max-width: 40px;
+    border-radius: 0px;
+
+}
+
+/* due to flex box tablet works as intended without a media query */
+
+@media screen and (max-width: 500px) {
+
+    .poster {
+        border-radius: 0px 0px 10px 10px;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+    }
+
+    .movie-panel,
+    .front,
+    .back {
+        max-width: 272px;
+        height: 516px;
+    }
+
+    .front {
+        text-align: center;
+    }
+
+    .movie-panel p {
+        height: 84px;
+        vertical-align: top;
+        position: relative;
+    }
+
+    .synopsis {
+        height: 50%;
+    }
+}
+
+/* footer styles 4.4*/
+footer {
+    background-color: #00A472;
+    border-radius: 10px 10px 0px 0px;
+    margin-top: 50px;
+    padding: 15px 15px 10px 15px;
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.contact {
+    display: inline-block;
+    width: 34%;
+    margin: auto;
+    font-weight: 600;
+}
+
+/* booking page styles */
+
+.movie-info p,
+.movie-info img {
+    display: inline-block;
+}
+
+.movie-info p {
+    width: 95%;
+}
+
+iframe {
+    width: 100%;
+    height: 600px;
+}
+
+main ul {
+    padding: 0px;
+}
+
+main li {
+    list-style: none;
+    display: inline-block;
+    padding-right: 20px;
+    font-weight: 600;
+}
+
+/* form styling 5.1 */
+
+form {
+    text-align: center;
+}
+
+form label,
+form select {
+    padding-right: 5px;
+    font-weight: 600;
+}
+
+form select{
+    background-color: #006e4d41;
+    border-radius: 5px;
+    padding: 5px 0px 5px 0px;
+}
+
+.session {
+    vertical-align: middle;
+}
+
+
+.session {
+    display: inline-block;
+    background-color: #00A472;
+    width: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0px 10px 0px 10px;
+    box-shadow: 5px 5px#00835c;
+    font-weight: 600;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]:checked + .session {
+    background-color: #00c78b;
+    transform: translateX(3px) translateY(3px);
+    box-shadow: 2px 2px #00835c;
+}
+
+.user-details {
+    margin:auto;
+    width: 30%;
+    text-align: left;
+}
+
+.user-details input[type="text"] {
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: #006e4d41;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    margin-top: 20px;
+    padding: 20px;
+    width: 100px;
+    background-color: #00A472;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    box-shadow: 3px 3px #00835c;
+}
+
+input[type="submit"]:hover {
+    background-color: #00835c;
+}
+
+input[type="submit"]:active {
+    background-color: #00c78b;
+    box-shadow: 1px 1px #00835c;
+    transform: translateX(2px) translateY(2px);
+}
