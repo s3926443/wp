@@ -1,3 +1,8 @@
+<?php
+require_once('./tools.php') ;
+include './post-validation.php';
+?>
+
 <!DOCTYPE html>
 <html lang='en'>
 
@@ -56,7 +61,7 @@
       allowfullscreen>
     </iframe>
 
-    <form action="../processing.php" method="post">
+    <form action="./booking.php" method="post">
       <h2>Book Here</h2>
 
       <input type="hidden" id="movieName" name="movie" value="ACT">
@@ -204,19 +209,7 @@
       Programming course at RMIT University in Melbourne, Australia.</div>
     <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
   </footer>
-  <aside id="debug">
-    <hr>
-    <h3>Debug Area</h3>
-    <pre>
-GET Contains:
-<?php print_r($_GET) ?>
-POST Contains:
-<?php print_r($_POST) ?>
-SESSION Contains:
-<?php print_r($_SESSION) ?>
-      </pre>
-  </aside>
+  <?php debugModule() ?>
 
 </body>
-
 </html>

@@ -56,7 +56,7 @@
       allowfullscreen>
     </iframe>
 
-    <form action="./booking.php" method="post">
+    <form action="../processing.php" method="post">
       <h2>Book Here</h2>
 
       <input type="hidden" id="movieName" name="movie" value="ACT">

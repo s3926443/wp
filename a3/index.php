@@ -1,3 +1,8 @@
+<?php
+require_once('tools.php');
+include './post-validation.php';
+?>
+
 <!DOCTYPE html>
 <html lang='en'>
 
@@ -17,7 +22,7 @@
 </head>
 
 <body>
-  
+
   <header>
     <div>
       <h1><img src="../../media/cinema_logo.png" alt=""><br>Lunardo Cinema</h1>
@@ -35,8 +40,8 @@
   </nav>
 
   <main>
-    <div>
-      <a class="about-us-anchor" id="about-us"></a>
+    <div class='article'>
+      <a class="about-us-anchor " id="about-us"></a>
       <h2>About Us</h2>
       <p>
         Here at Lunardo we take pride in offering a truly immersive cinematic experience perfect for any viewer
@@ -54,8 +59,8 @@
       </p>
     </div>
 
-    <div class="seats-and-prices">
-      <a class="seats-and-prices-anchor" id="seats-and-prices"></a>
+    <div class="seats-and-prices article">
+      <a class="seats-and-prices-anchor " id="seats-and-prices"></a>
       <h2>Seats & Prices</h2>
       <p>
         We now have two new seats in our theatres. One being the Profern Standard which is included in our Standard
@@ -124,8 +129,8 @@
       </p>
     </div>
 
-    <div class="now-showing">
-      <a class="now-showing-anchor" id="now-showing"></a>
+    <div class="now-showing article">
+      <a class="now-showing-anchor " id="now-showing"></a>
       <h2>Now Showing</h2>
       <div class="movie-section">
         <div class="movie-panel">
@@ -157,7 +162,7 @@
                 </ul>
               </div>
               <div class="booking-button">
-                <button ><a href="./booking.php">Book Now</a></button>
+                <button><a href="./booking.php">Book Now</a></button>
               </div>
             </div>
           </div>
@@ -287,7 +292,7 @@
       Programming course at RMIT University in Melbourne, Australia.</div>
     <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
   </footer>
-
+  <?php debugModule() ?>
+  <script src="./script.js"></script>
 </body>
-
-</html>
+</html >

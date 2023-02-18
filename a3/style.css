@@ -72,6 +72,11 @@ nav a {
     transition: color 0.25s;
 }
 
+nav a.current {
+    color: #7200a4;
+    transition: 0.25s;
+}
+
 a:link {
     text-decoration: none;
     color: #000;
