@@ -61,7 +61,7 @@ include './post-validation.php';
       allowfullscreen>
     </iframe>
 
-    <form action="./booking.php" method="post">
+    <form action="./booking.php" method="post" onsubmit="return validate()">
       <h2>Book Here</h2>
 
       <input type="hidden" id="movieName" name="movie" value="ACT">
@@ -210,6 +210,6 @@ include './post-validation.php';
     <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
   </footer>
   <?php debugModule() ?>
-
 </body>
+<script src='./script.js'></script>
 </html>
