@@ -78,7 +78,7 @@ function validate() {
         document.getElementById('mobile').style.border = "2px solid black";
     }
 
-    if (calculatePrice == 0) {
+    if (calculatePrice() == 0) {
         validateResult = false;
     }
 
@@ -109,7 +109,7 @@ function calculatePrice() {
 
     let seats = [STAPrice, FCAPrice, STPPrice, FCPPrice, STCPrice, FCCPrice];
 
-    let totalPrice;
+    let totalPrice = 0;
     seats.forEach(seat => {
         totalPrice += seat;
     });
