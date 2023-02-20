@@ -5,14 +5,14 @@ session_start();
 //Debugging added to bottoms of index.php and booking.php
 function debugModule()
 {
-  echo "<pre>";
+  echo "<hr><pre>";
   echo 'GET Contains:';
   print_r($_GET);
   echo 'POST Contains:';
   print_r($_POST);
   echo 'SESSION Contains:';
   print_r($_SESSION);
-  echo "</pre>";
+  echo "</pre><hr>";
 }
 
 function printMyCode()
@@ -20,7 +20,7 @@ function printMyCode()
   $allLinesOfCode = file($_SERVER['SCRIPT_FILENAME']);
   echo "<pre id='myCode'><ol>";
   foreach ($allLinesOfCode as $oneLineOfCode) {
-    echo "<li>" . rtrim(htmlentities($oneLineOfCode)) . "</li";
+    echo "<li>" . rtrim(htmlentities($oneLineOfCode)) . "<br></li";
   }
   echo "</ol></pre>";
 }

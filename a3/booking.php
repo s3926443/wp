@@ -1,5 +1,5 @@
 <?php
-require_once('./tools.php') ;
+require('./tools.php') ;
 include './post-validation.php';
 ?>
 
@@ -68,7 +68,7 @@ include './post-validation.php';
 
       <h3>Adult</h3>
       <label for="seatsSta">Standard:</label>
-      <select name="seats[STA]" id="seatsSta" data-fullprice="21.5" data-discprice="16">
+      <select name="seats[STA]" id="seatsSta" data-fullprice="21.5" data-discprice="16" class="seats">
         <option value="">Please Select</option>
         <option value="1">1</option>
         <option value="2">2</option>
@@ -83,7 +83,7 @@ include './post-validation.php';
       </select>
 
       <label for="seatsFca">First Class:</label>
-      <select name="seats[FCA]" id="seatsFca" data-fullprice="31" data-discprice="25">
+      <select name="seats[FCA]" id="seatsFca" data-fullprice="31" data-discprice="25" class="seats">
         <option value="">Please Select</option>
         <option value="1">1</option>
         <option value="2">2</option>
@@ -99,7 +99,7 @@ include './post-validation.php';
 
       <h3>Concession</h3>
       <label for="seatsStp">Standard:</label>
-      <select name="seats[STP]" id="seatsStp" data-fullprice="19" data-discprice="14.5">
+      <select name="seats[STP]" id="seatsStp" data-fullprice="19" data-discprice="14.5" class="seats">
         <option value="">Please Select</option>
         <option value="1">1</option>
         <option value="2">2</option>
@@ -114,7 +114,7 @@ include './post-validation.php';
       </select>
 
       <label for="seatsFcp">First Class:</label>
-      <select name="seats[FCP]" id="seatsFcp" data-fullprice="28" data-discprice="23.5">
+      <select name="seats[FCP]" id="seatsFcp" data-fullprice="28" data-discprice="23.5" class="seats">
         <option value="">Please Select</option>
         <option value="1">1</option>
         <option value="2">2</option>
@@ -130,7 +130,7 @@ include './post-validation.php';
 
       <h3>Child</h3>
       <label for="seatsStc">Standard:</label>
-      <select name="seats[STC]" id="seatsStc" data-fullprice="17.5" data-discprice="13">
+      <select name="seats[STC]" id="seatsStc" data-fullprice="17.5" data-discprice="13" class="seats">
         <option value="">Please Select</option>
         <option value="1">1</option>
         <option value="2">2</option>
@@ -145,7 +145,7 @@ include './post-validation.php';
       </select>
 
       <label for="seatsFcc">First Class:</label>
-      <select name="seats[FCC]" id="seatsFcc" data-fullprice="25" data-discprice="22">
+      <select name="seats[FCC]" id="seatsFcc" data-fullprice="25" data-discprice="22" class="seats">
         <option value="">Please Select</option>
         <option value="1">1</option>
         <option value="2">2</option>
@@ -160,7 +160,7 @@ include './post-validation.php';
       </select>
 
       <h3>Session</h3>
-      <input type="radio" name="day" id="MON" value="MON" data-pricing="discprice">
+      <input type="radio" name="day" id="MON" value="MON" data-pricing="discprice" required>
       <label class="session" for="MON">MONDAY<br>9PM</label>
       <input type="radio" name="day" id="TUE" value="TUE" data-pricing="fullprice">
       <label class="session" for="TUE">TUESDAY<br>9PM</label>
@@ -184,7 +184,7 @@ include './post-validation.php';
         <label for="mobile"> Your Phone Number:</label><br>
         <input type="text" name="user[mobile]" id="mobile" required><br>
       </div>
-
+      <h3 id="totalPrice">Total Price: </h3>
       <input type="submit" value="Book">
     </form>
   </main>
@@ -209,7 +209,10 @@ include './post-validation.php';
       Programming course at RMIT University in Melbourne, Australia.</div>
     <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
   </footer>
-  <?php debugModule() ?>
+  <?php 
+  debugModule(); 
+  printMyCode();
+  ?>
 </body>
 <script src='./script.js'></script>
 </html>
