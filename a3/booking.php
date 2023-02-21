@@ -55,116 +55,43 @@ redirectUser()
     <form action="./booking.php" method="post" onsubmit="return validate()">
       <h2>Book Here</h2>
 
-      <input type="hidden" id="movieName" name="movie" value="ACT">
+      <input type="hidden" id="movieName" name="movie" value="<?= getContent()?>">
 
       <h3>Adult</h3>
       <label for="seatsSta">Standard:</label>
       <select name="seats[STA]" id="seatsSta" data-fullprice="21.5" data-discprice="16" class="seats">
-        <option value="">Please Select</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
+      <?= generateOptions()?>
       </select>
 
       <label for="seatsFca">First Class:</label>
       <select name="seats[FCA]" id="seatsFca" data-fullprice="31" data-discprice="25" class="seats">
-        <option value="">Please Select</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
+      <?= generateOptions()?>
       </select>
 
       <h3>Concession</h3>
       <label for="seatsStp">Standard:</label>
       <select name="seats[STP]" id="seatsStp" data-fullprice="19" data-discprice="14.5" class="seats">
-        <option value="">Please Select</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
+      <?= generateOptions()?>
       </select>
 
       <label for="seatsFcp">First Class:</label>
       <select name="seats[FCP]" id="seatsFcp" data-fullprice="28" data-discprice="23.5" class="seats">
-        <option value="">Please Select</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
+      <?= generateOptions()?>
       </select>
 
       <h3>Child</h3>
       <label for="seatsStc">Standard:</label>
       <select name="seats[STC]" id="seatsStc" data-fullprice="17.5" data-discprice="13" class="seats">
-        <option value="">Please Select</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
+      <?= generateOptions()?>
       </select>
 
       <label for="seatsFcc">First Class:</label>
       <select name="seats[FCC]" id="seatsFcc" data-fullprice="25" data-discprice="22" class="seats">
-        <option value="">Please Select</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
+      <?= generateOptions()?>
       </select>
 
       <h3>Session</h3>
-      <input type="radio" name="day" id="MON" value="MON" data-pricing="discprice" required>
-      <label class="session" for="MON">MONDAY<br>9PM</label>
-      <input type="radio" name="day" id="TUE" value="TUE" data-pricing="fullprice">
-      <label class="session" for="TUE">TUESDAY<br>9PM</label>
-      <input type="radio" name="day" id="WED" value="WED" data-pricing="fullprice">
-      <label class="session" for="WED">WEDNESDAY<br>9PM</label>
-      <input type="radio" name="day" id="THU" value="THU" data-pricing="fullprice">
-      <label class="session" for="THU">THURSDAY<br>9PM</label>
-      <input type="radio" name="day" id="FRI" value="FRI" data-pricing="fullprice">
-      <label class="session" for="FRI">FRIDAY<br>9PM</label>
-      <input type="radio" name="day" id="SAT" value="SAT" data-pricing="fullprice">
-      <label class="session" for="SAT">SATURDAY<br>6PM</label>
-      <input type="radio" name="day" id="SUN" value="SUN" data-pricing="fullprice">
-      <label class="session" for="SUN">SUNDAY<br>6PM</label>
+      <?php generateSession()?>
 
       <h3>Your Details</h3>
       <div class="user-details">

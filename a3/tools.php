@@ -40,7 +40,8 @@ function php2js($arr, $arrName)
 Many will be provided in the teaching materials,
 keep a look out for them!
 */
-function getContent() {
+function getContent()
+{
   $content = $_GET['content_id'];
   return $content;
 }
@@ -62,31 +63,31 @@ const movies = [
     'poster' => '<img class="poster" src="../../media/avatar-poster.png" alt="Avatar the way of water movie poster">',
     'sessions' => [
       'mon' => [
-      'time' => '9pm',
-      'price' => 'discprice'
+        'time' => '9PM',
+        'price' => 'discprice'
       ],
       'tue' => [
-        'time' => '9pm',
+        'time' => '9PM',
         'price' => 'fullprice'
-        ],
+      ],
       'wed' => [
-        'time' => '9pm',
+        'time' => '9PM',
         'price' => 'fullprice'
-        ],
+      ],
       'thu' => [
-        'time' => '9pm',
+        'time' => '9PM',
         'price' => 'fullprice'
-        ],
+      ],
       'fri' => [
-        'time' => '9pm',
+        'time' => '9PM',
         'price' => 'fullprice'
-        ],
+      ],
       'sat' => [
-        'time' => '6pm',
+        'time' => '6PM',
         'price' => 'fullprice'
-        ],
+      ],
       'sun' => [
-        'time' => '6pm',
+        'time' => '6PM',
         'price' => 'fullprice'
       ]
     ]
@@ -107,23 +108,23 @@ const movies = [
     'poster' => '<img class="poster" src="../../media/weird-poster.png" alt="weird the al yankovic poster">',
     'sessions' => [
       'wed' => [
-        'time' => '12pm',
+        'time' => '12PM',
         'price' => 'discprice'
-        ],
+      ],
       'thu' => [
-        'time' => '12pm',
+        'time' => '12PM',
         'price' => 'discprice'
-        ],
+      ],
       'fri' => [
-        'time' => '12pm',
+        'time' => '12PM',
         'price' => 'discprice'
-        ],
+      ],
       'sat' => [
-        'time' => '3pm',
+        'time' => '3PM',
         'price' => 'fullprice'
-        ],
+      ],
       'sun' => [
-        'time' => '3pm',
+        'time' => '3PM',
         'price' => 'fullprice'
       ]
     ]
@@ -144,31 +145,31 @@ const movies = [
     'poster' => '<img class="poster" src="../../media/puss-poster.png" alt="puss in boots the last wish poster">',
     'sessions' => [
       'mon' => [
-      'time' => '12pm',
-      'price' => 'discprice'
+        'time' => '12PM',
+        'price' => 'discprice'
       ],
       'tue' => [
-        'time' => '12pm',
+        'time' => '12PM',
         'price' => 'discprice'
-        ],
+      ],
       'wed' => [
-        'time' => '6pm',
+        'time' => '6PM',
         'price' => 'fullprice'
-        ],
+      ],
       'thu' => [
-        'time' => '6pm',
+        'time' => '6PM',
         'price' => 'fullprice'
-        ],
+      ],
       'fri' => [
-        'time' => '6pm',
+        'time' => '6PM',
         'price' => 'fullprice'
-        ],
+      ],
       'sat' => [
-        'time' => '12pm',
+        'time' => '12PM',
         'price' => 'fullprice'
-        ],
+      ],
       'sun' => [
-        'time' => '12pm',
+        'time' => '12PM',
         'price' => 'fullprice'
       ]
     ]
@@ -189,58 +190,101 @@ const movies = [
     'poster' => '<img class="poster" src="../../media/margrete-poster.png" alt="margrete queen of the north poster">',
     'sessions' => [
       'mon' => [
-      'time' => '6pm',
-      'price' => 'discprice'
+        'time' => '6PM',
+        'price' => 'discprice'
       ],
       'tue' => [
-        'time' => '6pm',
+        'time' => '6PM',
         'price' => 'fullprice'
-        ],
+      ],
       'sat' => [
-        'time' => '9pm',
+        'time' => '9PM',
         'price' => 'fullprice'
-        ],
+      ],
       'sun' => [
-        'time' => '9pm',
+        'time' => '9PM',
         'price' => 'fullprice'
       ]
     ]
   ]
 ];
 
-function redirectUser() {
+// Ensures the user is on a valid booking page. If not redirects the user to index.php
+function redirectUser()
+{
   $validPage = false;
-  foreach(array_keys(movies) as $movie) {
+  foreach (array_keys(movies) as $movie) {
     if (getContent() === $movie) {
       $validPage = true;
     }
   }
 
   if ($validPage === false) {
-    header('Location: '.'./index.php'); die();
+    header('Location: ' . './index.php');
+    die();
   }
 }
 
-function getTitle() {
+function getTitle()
+{
   echo movies[getContent()]['title'];
 }
-function getDesc() {
+function getDesc()
+{
   echo movies[getContent()]['desc'];
 }
 
-function getRating() {
+function getRating()
+{
   echo movies[getContent()]['rating'];
 }
 
-function getFeatured() {
+function getFeatured()
+{
   echo "<ul>";
-  foreach(movies[getContent()]['featured'] as $actor) {
-    echo "<li>".$actor."</li>";
+  foreach (movies[getContent()]['featured'] as $actor) {
+    echo "<li>" . $actor . "</li>";
   }
   echo "</ul>";
 }
 
-function getVideo() {
+function getVideo()
+{
   echo movies[getContent()]['video'];
 }
+
+function generateSession()
+{
+  $i = 0;
+  $day = '';
+  foreach(movies[getContent()]['sessions'] AS $days) {
+    if (array_keys(movies[getContent()]['sessions'])[$i] === 'mon') {
+      $day = 'MONDAY';
+    } else if (array_keys(movies[getContent()]['sessions'])[$i] === 'tue') {
+      $day = 'TUESDAY';
+    } else if (array_keys(movies[getContent()]['sessions'])[$i] === 'wed') {
+      $day = 'WEDNESDAY';
+    } else if (array_keys(movies[getContent()]['sessions'])[$i] === 'thu') {
+      $day = 'THURSDAY';
+    } else if (array_keys(movies[getContent()]['sessions'])[$i] === 'fri') {
+      $day = 'FRIDAY';
+    } else if (array_keys(movies[getContent()]['sessions'])[$i] === 'sat') {
+      $day = 'SATURDAY';
+    } else if (array_keys(movies[getContent()]['sessions'])[$i] === 'sun') {
+      $day = 'SUNDAY';
+    }
+    echo '<input type="radio" name="day" id="'.array_keys(movies[getContent()]['sessions'])[$i].
+    '" value="'.array_keys(movies[getContent()]['sessions'])[$i].'" data-pricing="'.$days['price'].'" required>';
+    echo '<label class="session" for="'.array_keys(movies[getContent()]['sessions'])[$i].'">'.$day.'<br>'.$days['time'].'</label>';
+    $i++;
+  }
+}
+
+function generateOptions() {
+  echo '<option value="">Please Select</option>';
+  for ($i = 1; $i <= 10; $i++) {
+    echo '<option value="'.$i.'">'.$i.'</option>';
+  }
+}
+
 ?>
