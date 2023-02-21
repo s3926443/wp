@@ -162,7 +162,7 @@ include './post-validation.php';
                 </ul>
               </div>
               <div class="booking-button">
-                <button><a href="./booking.php">Book Now</a></button>
+                <button><a href="./booking.php?content_id=ACT">Book Now</a></button>
               </div>
             </div>
           </div>
@@ -195,7 +195,7 @@ include './post-validation.php';
                 </ul>
               </div>
               <div class="booking-button">
-                <button><a href="./booking.php">Book Now</a></button>
+                <button><a href="./booking.php?content_id=FAM">Book Now</a></button>
               </div>
             </div>
           </div>
@@ -229,7 +229,7 @@ include './post-validation.php';
                 </ul>
               </div>
               <div class="booking-button">
-                <button><a href="./booking.php">Book Now</a></button>
+                <button><a href="./booking.php?content_id=AHF">Book Now</a></button>
               </div>
             </div>
           </div>
@@ -262,7 +262,7 @@ include './post-validation.php';
                 </ul>
               </div>
               <div class="booking-button">
-                <button><a href="./booking.php">Book Now</a></button>
+                <button><a href="./booking.php?content_id=RMC">Book Now</a></button>
               </div>
             </div>
           </div>

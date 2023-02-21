@@ -1,6 +1,7 @@
 <?php
 require('./tools.php') ;
 include './post-validation.php';
+redirectUser()
 ?>
 
 <!DOCTYPE html>
@@ -38,28 +39,18 @@ include './post-validation.php';
   </nav>
 
   <main>
-    <h2>Avatar: The Way Of Water</h2>
+    <h2><?= getTitle() ?></h2>
     <div class="movie-info">
       <p>
-        Jake Sully lives with his newfound family formed on the extrasolar moon Pandora. Once a familiar threat
-        returns to finish what was previously started, Jake must work with Neytiri and the army of the Na'vi race
-        to protect their home.
+        <?= getDesc() ?>
       </p>
-      <img class="rating" src="../../media/m-rating.png" alt="M rating">
+      <?= getRating() ?>
     </div>
 
     <h3>Featuring</h3>
-    <ul>
-      <li>Sam Worthington</li>
-      <li>Zoe Saldana</li>
-      <li>Sigourney Weaver</li>
-    </ul>
+    <?= getFeatured() ?>
     <h3>Trailer</h3>
-    <iframe src="https://www.youtube.com/embed/d9MyW72ELq0" title="Avatar: The Way of Water | Official Trailer"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen>
-    </iframe>
+    <?= getVideo() ?>
 
     <form action="./booking.php" method="post" onsubmit="return validate()">
       <h2>Book Here</h2>
