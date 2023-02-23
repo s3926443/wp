@@ -40,7 +40,7 @@ function validate() {
 
     // Name regx and test
     let name = document.getElementById('userName').value;
-    const nameRGEX = /^[a-zA-Z ]+$/;
+    const nameRGEX = /^[-A-Za-z '.]{1,64}$/;
     let nameResult = nameRGEX.test(name);
     // console.log(nameResult);
 

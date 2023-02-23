@@ -138,7 +138,10 @@ redirectUser()
   </footer>
   <?php
   debugModule();
+  $postErrors = validateBooking();
+  echo print_r($postErrors);
   printMyCode();
+  
   ?>
 </body>
 <script src='./script.js'></script>

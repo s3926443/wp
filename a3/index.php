@@ -95,7 +95,7 @@ require('./post-validation.php');
         </tr>
         <tr>
           <td>Standard Concession</td>
-          <td>FCA</td>
+          <td>STP</td>
           <td>$14.50</td>
           <td>$19.00</td>
         </tr>

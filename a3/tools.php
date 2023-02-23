@@ -45,6 +45,33 @@ function getContent()
   return $content;
 }
 
+//pricing
+const seatPricing = [
+  'sta' => [
+    'fullprice' => 21.5,
+    'discprice' => 16.00
+  ],
+  'stp' => [
+    'fullprice' => 19.00,
+    'discprice' => 14.50
+  ],
+  'stc' => [
+    'fullprice' => 17.50,
+    'discprice' => 13.00
+  ],
+  'fca' => [
+    'fullprice' => 31.00,
+    'discprice' => 25.00
+  ],
+  'fcp' => [
+    'fullprice' => 28.00,
+    'discprice' => 23.50
+  ],
+  'fcc' => [
+    'fullprice' => 25.00,
+    'discprice' => 22.00
+  ],
+];
 
 // Associative array containing movie data
 const movies = [
@@ -324,7 +351,7 @@ function validateDay()
 function validateText()
 {
   $name = $_POST['user']['name'];
-  $nameRGEX = '/^[a-zA-Z ]+$/';
+  $nameRGEX = "/^[-A-Za-z '.]{1,64}$/";
   $nameResults = preg_match($nameRGEX, $name);
 
   $email = $_POST['user']['email'];
@@ -342,6 +369,37 @@ function validateText()
   }
 }
 
+function makeBooking() {
+  $date = date('m/d/Y');
+  $name = $_SESSION['user']['name'];
+  $email = $_SESSION['user']['email'];
+  $mobile = $_SESSION['user']['mobile'];
+  $movie = $_SESSION['movie'];
+  $day = $_SESSION['day'];
+  $time = movies[$_SESSION['movie']]['sessions'][$_SESSION['day']]['time'];
+  $numSTA = $_SESSION['seats']['STA'];
+  $priceSTA = round((int)$numSTA * seatPricing['sta'][movies[$_SESSION['movie']]['sessions'][$_SESSION['day']]['price']], 2);
+  $numSTP = $_SESSION['seats']['STP'];
+  $priceSTP = round((int)$numSTP * seatPricing['stp'][movies[$_SESSION['movie']]['sessions'][$_SESSION['day']]['price']], 2);
+  $numSTC = $_SESSION['seats']['STC'];
+  $priceSTC = round((int)$numSTC * seatPricing['stc'][movies[$_SESSION['movie']]['sessions'][$_SESSION['day']]['price']], 2);
+  $numFCA = $_SESSION['seats']['FCA'];
+  $priceFCA = round((int)$numFCA * seatPricing['fca'][movies[$_SESSION['movie']]['sessions'][$_SESSION['day']]['price']], 2);
+  $numFCP = $_SESSION['seats']['FCP'];
+  $priceFCP = round((int)$numFCP * seatPricing['fcp'][movies[$_SESSION['movie']]['sessions'][$_SESSION['day']]['price']], 2);
+  $numFCC = $_SESSION['seats']['FCC'];
+  $priceFCC = round((int)$numFCC * seatPricing['fcc'][movies[$_SESSION['movie']]['sessions'][$_SESSION['day']]['price']], 2);
+  $total = round($priceSTA + $priceSTP + $priceSTC + $priceFCA + $priceFCP + $priceFCC, 2);
+  $gst = round($total * 0.1, 2);
+
+
+  $bookingArr = [$date, $name, $email, $mobile, $movie, $day, $time, $numSTA, $priceSTA, $numSTP, $priceSTP, 
+    $numSTC, $priceSTC, $numFCA, $priceFCA, $numFCP, $priceFCP, $numFCC, $priceFCC, $total, $gst];
+  $fp = fopen('./bookings.txt', 'a');
+  fputcsv($fp, $bookingArr);
+  fclose($fp);
+}
+
 function validatePost()
 {
 
@@ -357,6 +415,8 @@ function validatePost()
     return;
   } else {
     $_SESSION = $_POST;
+    makeBooking();
+    //header('Location: ' . './receipt.php');
   }
 }
 
