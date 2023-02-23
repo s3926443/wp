@@ -34,6 +34,7 @@ function activeLink() {
     }
 }
 
+
 function validate() {
     let validateResult = true;
 

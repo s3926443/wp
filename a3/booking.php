@@ -1,8 +1,8 @@
 <?php
-require('./tools.php') ;
-include './post-validation.php';
+require('./tools.php');
+require('./post-validation.php');
 redirectUser()
-?>
+  ?>
 
 <!DOCTYPE html>
 <html lang='en'>
@@ -39,7 +39,9 @@ redirectUser()
   </nav>
 
   <main>
-    <h2><?= getTitle() ?></h2>
+    <h2>
+      <?= getTitle() ?>
+    </h2>
     <div class="movie-info">
       <p>
         <?= getDesc() ?>
@@ -52,58 +54,65 @@ redirectUser()
     <h3>Trailer</h3>
     <?= getVideo() ?>
 
-    <form action="./booking.php" method="post" onsubmit="return validate()">
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]."?content_id=".getContent())?>" method="post" onsubmit="return validate(); ret">
       <h2>Book Here</h2>
 
-      <input type="hidden" id="movieName" name="movie" value="<?= getContent()?>">
+      <input type="hidden" id="<?= getTitle() ?>" name="movie" value="<?= getContent() ?>">
 
       <h3>Adult</h3>
       <label for="seatsSta">Standard:</label>
       <select name="seats[STA]" id="seatsSta" data-fullprice="21.5" data-discprice="16" class="seats">
-      <?= generateOptions()?>
+        <?= generateOptions() ?>
       </select>
 
       <label for="seatsFca">First Class:</label>
       <select name="seats[FCA]" id="seatsFca" data-fullprice="31" data-discprice="25" class="seats">
-      <?= generateOptions()?>
+        <?= generateOptions() ?>
       </select>
 
       <h3>Concession</h3>
       <label for="seatsStp">Standard:</label>
       <select name="seats[STP]" id="seatsStp" data-fullprice="19" data-discprice="14.5" class="seats">
-      <?= generateOptions()?>
+        <?= generateOptions() ?>
       </select>
 
       <label for="seatsFcp">First Class:</label>
       <select name="seats[FCP]" id="seatsFcp" data-fullprice="28" data-discprice="23.5" class="seats">
-      <?= generateOptions()?>
+        <?= generateOptions() ?>
       </select>
 
       <h3>Child</h3>
       <label for="seatsStc">Standard:</label>
       <select name="seats[STC]" id="seatsStc" data-fullprice="17.5" data-discprice="13" class="seats">
-      <?= generateOptions()?>
+        <?= generateOptions() ?>
       </select>
 
       <label for="seatsFcc">First Class:</label>
       <select name="seats[FCC]" id="seatsFcc" data-fullprice="25" data-discprice="22" class="seats">
-      <?= generateOptions()?>
+        <?= generateOptions() ?>
       </select>
 
       <h3>Session</h3>
-      <?php generateSession()?>
+      <?php generateSession() ?>
 
       <h3>Your Details</h3>
       <div class="user-details">
         <label for="userName">Your Name:</label><br>
-        <input type="text" name="user[name]" id="userName" required><br>
+        <input type="text" name="user[name]" id="userName"
+          value="<?php if (isset($_POST['user']['name'])) {
+            echo $_POST['user']['name'];
+          } ?>" required><br>
         <label for="email">Your Email:</label><br>
-        <input type="text" name="user[email]" id="email" required><br>
+        <input type="text" name="user[email]" id="email" value="<?php if (isset($_POST['user']['email'])) {
+            echo $_POST['user']['email'];
+          } ?>" required><br>
         <label for="mobile"> Your Phone Number:</label><br>
-        <input type="text" name="user[mobile]" id="mobile" required><br>
+        <input type="text" name="user[mobile]" id="mobile" value="<?php if (isset($_POST['user']['mobile'])) {
+            echo $_POST['user']['mobile'];
+          } ?>" required><br>
       </div>
       <h3 id="totalPrice">Total Price: </h3>
-      <input type="submit" value="Book">
+      <input type="submit" value="Book" href="./booking.php?content_id=ACT">
     </form>
   </main>
   <footer>
@@ -127,10 +136,11 @@ redirectUser()
       Programming course at RMIT University in Melbourne, Australia.</div>
     <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
   </footer>
-  <?php 
-  debugModule(); 
+  <?php
+  debugModule();
   printMyCode();
   ?>
 </body>
 <script src='./script.js'></script>
+
 </html>

@@ -1,6 +1,6 @@
 <?php
-require_once('tools.php');
-include './post-validation.php';
+require('tools.php');
+require('./post-validation.php');
 ?>
 
 <!DOCTYPE html>
@@ -292,7 +292,10 @@ include './post-validation.php';
       Programming course at RMIT University in Melbourne, Australia.</div>
     <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
   </footer>
-  <?php debugModule() ?>
+  <?php 
+  debugModule();
+  printMyCode();
+  ?>
   <script src="./script.js"></script>
 </body>
 </html >

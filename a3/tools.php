@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 // Section 3.2 Assignmnet Background
 //Debugging added to bottoms of index.php and booking.php
 function debugModule()
@@ -45,6 +44,7 @@ function getContent()
   $content = $_GET['content_id'];
   return $content;
 }
+
 
 // Associative array containing movie data
 const movies = [
@@ -209,6 +209,7 @@ const movies = [
   ]
 ];
 
+
 // Ensures the user is on a valid booking page. If not redirects the user to index.php
 function redirectUser()
 {
@@ -253,11 +254,18 @@ function getVideo()
   echo movies[getContent()]['video'];
 }
 
+function getPoster()
+{
+  echo movies[getContent()]['poster'];
+}
+
+// Generates the session buttons on the booking page as per the schedule of the movies showings
 function generateSession()
 {
   $i = 0;
   $day = '';
-  foreach(movies[getContent()]['sessions'] AS $days) {
+
+  foreach (movies[getContent()]['sessions'] as $days) {
     if (array_keys(movies[getContent()]['sessions'])[$i] === 'mon') {
       $day = 'MONDAY';
     } else if (array_keys(movies[getContent()]['sessions'])[$i] === 'tue') {
@@ -273,18 +281,86 @@ function generateSession()
     } else if (array_keys(movies[getContent()]['sessions'])[$i] === 'sun') {
       $day = 'SUNDAY';
     }
-    echo '<input type="radio" name="day" id="'.array_keys(movies[getContent()]['sessions'])[$i].
-    '" value="'.array_keys(movies[getContent()]['sessions'])[$i].'" data-pricing="'.$days['price'].'" required>';
-    echo '<label class="session" for="'.array_keys(movies[getContent()]['sessions'])[$i].'">'.$day.'<br>'.$days['time'].'</label>';
+
+    echo '<input type="radio" name="day" id="' . array_keys(movies[getContent()]['sessions'])[$i] .
+      '" value="' . array_keys(movies[getContent()]['sessions'])[$i] . '" data-pricing="' . $days['price'] . '" required>';
+    echo '<label class="session" for="' . array_keys(movies[getContent()]['sessions'])[$i] . '">' . $day . '<br>' . $days['time'] . '</label>';
     $i++;
   }
 }
 
-function generateOptions() {
+function generateOptions()
+{
   echo '<option value="">Please Select</option>';
   for ($i = 1; $i <= 10; $i++) {
-    echo '<option value="'.$i.'">'.$i.'</option>';
+    echo '<option value="' . $i . '">' . $i . '</option>';
   }
 }
 
+// Time to check post data
+
+function validateMovie()
+{
+  $validMovie = false;
+  foreach (array_keys(movies) as $movie) {
+    if ($_POST['movie'] === $movie) {
+      $validMovie = true;
+    }
+  }
+  return $validMovie;
+}
+
+function validateDay()
+{
+  $validDay = false;
+  foreach (array_keys(movies[getContent()]['sessions']) as $day) {
+    if ($_POST['day'] = $day) {
+      $validDay = true;
+    }
+  }
+  return $validDay;
+}
+
+function validateText()
+{
+  $name = $_POST['user']['name'];
+  $nameRGEX = '/^[a-zA-Z ]+$/';
+  $nameResults = preg_match($nameRGEX, $name);
+
+  $email = $_POST['user']['email'];
+  $emailRGEX = '/^[a-zA-Z0-9_\-.]+@[a-zA-Z0-9\-.]+$/';
+  $emailResults = preg_match($emailRGEX, $email);
+
+  $mobile = $_POST['user']['mobile'];
+  $mobileRGEX = '/^(\(04\)|04|\+614)( ?\d){8}$/';
+  $mobileResults = preg_match($mobileRGEX, $mobile);
+
+  if (!$nameResults || !$emailResults || !$mobileResults) {
+    return false;
+  } else {
+    return true;
+  }
+}
+
+function validatePost()
+{
+
+  $seatCount = 0;
+  $seatNum = array_values($_POST['seats']);
+  for ($i = 0; $i < count($_POST['seats']); $i++) {
+    $seatCount += (int)$seatNum[$i];
+  }
+  if (!validateMovie() || !validateDay()) {
+    header('Location: ' . './index.php');
+    die();
+  } else if ($seatCount == 0 || !validateText()) {
+    return;
+  } else {
+    $_SESSION = $_POST;
+  }
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  validatePost();
+}
 ?>
