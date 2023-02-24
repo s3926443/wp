@@ -417,7 +417,6 @@ function printTicket()
         <img class="qr" src="../../media/qr-code.jpg" alt="fake qr code">
         <p class="info"><strong>When</strong><br>' . strtoupper($_SESSION['day']) . ' ' .
           movies[$_SESSION['movie']]['sessions'][$_SESSION['day']]['time'] . '</p>
-        
         </div>
       </div>';
       }
