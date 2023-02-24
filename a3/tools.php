@@ -372,7 +372,8 @@ function makeBooking()
     $numFCC,
     $priceFCC,
     $total,
-    $gst
+    $gst,
+    "\n"
   ];
   $fp = fopen('./bookings.txt', 'a');
   fputcsv($fp, $bookingArr);

@@ -1,2 +1,2 @@
 Order Date, Name, Email, Mobile, Movie Code, Day of Movie, Time of Movie, # STA, $ STA, # STP, $ STP, # STC, $ STC, # FCA, $ FCA, # FCP, $ FCP, # FCC, $ FCC, Total, GST
-02/23/2023,james,james@hotmail.com,"0441 992 735",ACT,sun,6PM,,0,4,76,,0,,0,,0,,0,76,7.602/24/2023,Mitchell,m.waghorn2000@gmail.com,0413789239,FAM,sun,12PM,2,43,,0,,0,,0,,0,1,25,68,6.8
+02/24/2023,Mitchell,m.waghorn2000@gmail.com,0413789239,FAM,sun,12PM,2,43,,0,,0,,0,,0,1,25,68,6.8
