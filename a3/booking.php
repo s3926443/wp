@@ -1,7 +1,7 @@
 <?php
 require('./tools.php');
 require('./post-validation.php');
-//redirectUser();
+redirectUser();
 ?>
 
 <!DOCTYPE html>
