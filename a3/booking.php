@@ -138,8 +138,10 @@ require('./post-validation.php');
   </footer>
   <?php
   debugModule();
-  $postErrors = validateBooking();
   printMyCode();
+  if (!empty($_POST)){
+    $postErrors = validateBooking();
+  }
   ?>
 </body>
 <script src='./script.js'></script>

@@ -417,3 +417,51 @@ input[type="submit"]:active {
     box-shadow: 1px 1px #00835c;
     transform: translateX(2px) translateY(2px);
 }
+
+/* receipt Styles */
+
+.receipt {
+    size: 21cm 29.7cm;
+    margin: 30mm 45mm 30mm 45mm;
+}
+
+.receipt header, .receipt footer {
+    background-color: #fff;
+}
+
+.receipt ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    justify-content: center;
+}
+
+.receipt li {
+    flex-basis: 33.333333%;
+}
+
+@media print {
+    .receipt footer {page-break-after: always;}
+  }
+
+.ticket-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.ticket {
+ width: 49%;
+}
+
+.ticket-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.qr {
+    height: 200px;
+}

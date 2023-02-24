@@ -10,7 +10,7 @@ function validateBooking()
   $username = trim($_POST['user']['name']);
   if ($username == '') {
     $errors['user']['name'] = "Name can't be blank";
-  } else if (!preg_match("/^[-A-Za-z '.]{1,64}$/", $username)) {
+  } else if (!preg_match("/^[-A-Za-z '.]+$/", $username)) {
     $errors['user']['name'] = "Name has invalid characters or is too long";
   }
 
@@ -71,11 +71,17 @@ function validateBooking()
   return $errors; // empty array -> no errors; populated array -> errors.
 }
 
-$postError = validateBooking();
+
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $postError = validateBooking();
   if (empty($postError)) {
     $_SESSION = $_POST;
     makeBooking();
+    header('Location:' . './receipt.php');
+  } else {
+    header('Location: ' . './index.php');
+    die();
   }
 } 
 ?>
