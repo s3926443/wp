@@ -1,8 +1,8 @@
 <?php
 require('./tools.php');
 require('./post-validation.php');
-redirectUser()
-  ?>
+//redirectUser();
+?>
 
 <!DOCTYPE html>
 <html lang='en'>
@@ -139,9 +139,7 @@ redirectUser()
   <?php
   debugModule();
   $postErrors = validateBooking();
-  echo print_r($postErrors);
   printMyCode();
-  
   ?>
 </body>
 <script src='./script.js'></script>

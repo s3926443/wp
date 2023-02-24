@@ -2,6 +2,8 @@
 session_start();
 // Section 3.2 Assignmnet Background
 //Debugging added to bottoms of index.php and booking.php
+
+
 function debugModule()
 {
   echo "<hr><pre>";
@@ -324,19 +326,6 @@ function generateOptions()
   }
 }
 
-// Time to check post data
-
-function validateMovie()
-{
-  $validMovie = false;
-  foreach (array_keys(movies) as $movie) {
-    if ($_POST['movie'] === $movie) {
-      $validMovie = true;
-    }
-  }
-  return $validMovie;
-}
-
 function validateDay()
 {
   $validDay = false;
@@ -400,7 +389,7 @@ function makeBooking() {
   fclose($fp);
 }
 
-function validatePost()
+/*function validatePost()
 {
 
   $seatCount = 0;
@@ -422,5 +411,5 @@ function validatePost()
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   validatePost();
-}
+} */
 ?>
