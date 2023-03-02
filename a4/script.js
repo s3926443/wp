@@ -118,26 +118,51 @@ function calculatePrice() {
     return totalPrice;
 }
 
+
+/*  A4 CODE  */
+let rememberMeButton = document.getElementById('remember-me-button');
+setUserData()
 // button which will save customers name, email and mobile number for future vistiting
 // after they make a booking
-let saveUserData = false;
 
-/*function toggleUserData() {
-    let name = getElementById('userName').textContent;
-    let email = getElementById('email').textContent;
-    let mobile = getElementById('mobile').textContent;
 
-    localStorage.setItem('name', name);
-    localStorage.setItem('email', email);
-    localStorage.setItem('mobile', mobile);
-}*/
+// if the user consents to have data saved on local storage it will remember it, otherwise it will
+// remove data from local storage
+function toggleUserData(consent) {
+    if (consent === false) {
+        localStorage.clear()
+    } else {
+        let name = document.getElementById('userName').value;
+        let email = document.getElementById('email').value;
+        let mobile = document.getElementById('mobile').value;
 
-let rememberMeButton = document.getElementById('remember-me-button');
+        localStorage.setItem('name', name);
+        localStorage.setItem('email', email);
+        localStorage.setItem('mobile', mobile);
+        localStorage.setItem('checkBox', 'set')
+    }
+}
+
+// pre-fills form with user data from local storage
+function setUserData() {
+    if (localStorage.getItem('checkBox') === 'set') {
+        rememberMeButton.classList.toggle('active');
+        rememberMeButton.textContent = "Forget Me";
+    }
+    document.getElementById('userName').value = localStorage.getItem('name');
+    document.getElementById('email').value = localStorage.getItem('email');
+    document.getElementById('mobile').value = localStorage.getItem('mobile');
+}
+
+// event listener for the rememberMeButton which toggles the style of the button
+// to make it button like. As well as saving or deleting users localStorage.
 rememberMeButton.addEventListener('click', () => {
     rememberMeButton.classList.toggle('active');
     if (rememberMeButton.classList.contains('active')) {
         rememberMeButton.textContent = "Forget Me";
+        toggleUserData(true);
     } else {
         rememberMeButton.textContent = "Remember Me"
+        toggleUserData(false);
     }
 });
