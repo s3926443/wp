@@ -371,6 +371,27 @@ form select {
   font-weight: 600;
 }
 
+.remember-me-button {
+  display: inline-block;
+  background-color: #00a472;
+  width: 100px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 0px;
+  margin: 10px 10px 0px 10px;
+  box-shadow: 5px 5px#00835c;
+  font-weight: 600;
+  height: 55px;
+  width: 130px;
+}
+
+.remember-me-button:active, .active {
+  background-color: #00c78b;
+  transform: translateX(3px) translateY(3px);
+  box-shadow: 2px 2px #00835c;
+}
+
+
 input[type="radio"] {
   display: none;
 }

@@ -111,6 +111,9 @@ redirectUser();
             echo $_POST['user']['mobile'];
           } ?>" required><br>
       </div>
+      <div id="remember-me">
+        <button type="button" class=remember-me-button id="remember-me-button">Remember Me</button>
+      </div>
       <h3 id="totalPrice">Total Price: </h3>
       <input type="submit" value="Book" href="./booking.php?content_id=ACT">
     </form>

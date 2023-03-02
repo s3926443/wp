@@ -117,3 +117,27 @@ function calculatePrice() {
     document.getElementById('totalPrice').textContent = `Total Price: $${totalPrice.toFixed(2)}`;
     return totalPrice;
 }
+
+// button which will save customers name, email and mobile number for future vistiting
+// after they make a booking
+let saveUserData = false;
+
+/*function toggleUserData() {
+    let name = getElementById('userName').textContent;
+    let email = getElementById('email').textContent;
+    let mobile = getElementById('mobile').textContent;
+
+    localStorage.setItem('name', name);
+    localStorage.setItem('email', email);
+    localStorage.setItem('mobile', mobile);
+}*/
+
+let rememberMeButton = document.getElementById('remember-me-button');
+rememberMeButton.addEventListener('click', () => {
+    rememberMeButton.classList.toggle('active');
+    if (rememberMeButton.classList.contains('active')) {
+        rememberMeButton.textContent = "Forget Me";
+    } else {
+        rememberMeButton.textContent = "Remember Me"
+    }
+});
