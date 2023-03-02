@@ -54,7 +54,8 @@ redirectUser();
     <h3>Trailer</h3>
     <?= getVideo() ?>
 
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]."?content_id=".getContent())?>" method="post" onsubmit="return validate(); ret">
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"] . "?content_id=" . getContent()) ?>" method="post"
+      onsubmit="return validate();" id="booking-form">
       <h2>Book Here</h2>
 
       <input type="hidden" id="<?= getTitle() ?>" name="movie" value="<?= getContent() ?>">
@@ -98,18 +99,17 @@ redirectUser();
       <h3>Your Details</h3>
       <div class="user-details">
         <label for="userName">Your Name:</label><br>
-        <input type="text" name="user[name]" id="userName"
-          value="<?php if (isset($_POST['user']['name'])) {
-            echo $_POST['user']['name'];
-          } ?>" required><br>
+        <input type="text" name="user[name]" id="userName" value="<?php if (isset($_POST['user']['name'])) {
+          echo $_POST['user']['name'];
+        } ?>" required><br>
         <label for="email">Your Email:</label><br>
         <input type="text" name="user[email]" id="email" value="<?php if (isset($_POST['user']['email'])) {
-            echo $_POST['user']['email'];
-          } ?>" required><br>
+          echo $_POST['user']['email'];
+        } ?>" required><br>
         <label for="mobile"> Your Phone Number:</label><br>
         <input type="text" name="user[mobile]" id="mobile" value="<?php if (isset($_POST['user']['mobile'])) {
-            echo $_POST['user']['mobile'];
-          } ?>" required><br>
+          echo $_POST['user']['mobile'];
+        } ?>" required><br>
       </div>
       <div id="remember-me">
         <button type="button" class=remember-me-button id="remember-me-button">Remember Me</button>
@@ -119,6 +119,15 @@ redirectUser();
     </form>
   </main>
   <footer>
+    <div class="check-bookings">
+      <form action="currentBookings.php" method="post">
+        <label for="email">Your Email:</label>
+        <input type="text" name="user[email]" id="email" required>
+        <label for="mobile">Your Mobile:</label>
+        <input type="text" name="user[mobile]" id="mobile" required>
+        <input type="submit" value="Find Booking" href="./currentBookings.php" id="check-button">
+      </form>
+    </div>
     <div class="contact-wrapper">
       <div class=" contact">
         <p>Email: Lunardo@Lunardo.com.au</p>
@@ -142,7 +151,7 @@ redirectUser();
   <?php
   debugModule();
   printMyCode();
-  if (!empty($_POST)){
+  if (!empty($_POST)) {
     $postErrors = validateBooking();
   }
   ?>

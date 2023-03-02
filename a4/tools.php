@@ -426,4 +426,18 @@ function printTicket()
   }
 
 }
+
+function findBookings()
+{
+  $bookingFound = false;
+  $fp = fopen('./bookings.txt', 'r');
+  while (($line = fgetCSV($fp)) !== false) {
+    if (in_array($_POST['email'], $line) && in_array($_POST['mobile'], $line)) {
+      echo
+        '<div>
+      
+        </div>';
+    }
+  }
+}
 ?>

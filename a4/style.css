@@ -391,7 +391,6 @@ form select {
   box-shadow: 2px 2px #00835c;
 }
 
-
 input[type="radio"] {
   display: none;
 }
@@ -415,7 +414,7 @@ input[type="radio"]:checked + .session {
   border-radius: 5px;
 }
 
-input[type="submit"] {
+#booking-form input[type="submit"] {
   margin-top: 20px;
   padding: 20px;
   width: 100px;
@@ -494,4 +493,25 @@ input[type="submit"]:active {
 
 .qr {
   height: 200px;
+}
+
+/* find booking styling */
+#check-button {
+  display: inline-block;
+  background-color: #ffffff;
+  width: 100px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 0px;
+  margin: 10px 10px 0px 10px;
+  box-shadow: 5px 5px#c4c4c4;
+  font-weight: 600;
+  height: 55px;
+  width: 130px;
+}
+
+#check-button:active {
+  background-color: #f8f8f8;
+  transform: translateX(3px) translateY(3px);
+  box-shadow: 2px 2px #c4c4c4;
 }
