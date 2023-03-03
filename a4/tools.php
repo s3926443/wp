@@ -427,6 +427,9 @@ function printTicket()
 
 }
 
+
+// Function which finds bookings from bookings.txt and displays them
+// if not booking found return an error message
 function findBookings()
 {
   $bookingFound = false;

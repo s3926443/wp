@@ -1,9 +1,9 @@
 <?php
 require('./tools.php');
-//if (empty($_SESSION)) {
-    //header('Location: ' . './index.php');
-    //die;
-//}
+if (empty($_SESSION)) {
+    header('Location: ' . './index.php');
+    die;
+}
 ?>
 
 <!DOCTYPE html>
