@@ -1,5 +1,9 @@
 <?php
 require('./tools.php');
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST['search'] == 'true') {
+    $_SESSION = $_POST;
+    header('Location: ' . './receipt.php');
+}
 ?>
 
 <!DOCTYPE html>
@@ -21,13 +25,13 @@ require('./tools.php');
 </head>
 
 <body>
-    
+
     <header>
         <div>
             <h1><img src="../../media/cinema_logo.png" alt=""><br />Lunardo Cinema</h1>
         </div>
     </header>
-
+    
     <nav>
         <div>
             <ul>
@@ -35,13 +39,36 @@ require('./tools.php');
             </ul>
         </div>
     </nav>
+    <h1>Bookings</h1>
+    <?php findBookings(); ?>
+    <footer>
+        <div class="contact-wrapper">
+            <div class=" contact">
+                <p>Email: Lunardo@Lunardo.com.au</p>
+            </div>
+            <div class="contact">
+                <p>Mobile: 0404123456</p>
+            </div>
+            <div class="contact">
+                <p>10 George street, Sydney, 2000</p>
+            </div>
+        </div>
+        <div>&copy;
+            <script>
+                document.write(new Date().getFullYear());
+            </script> Mitchell Waghorn, s3926443. <a href="https://github.com/s3926443/wp" target="_blank">github</a> Last
+            modified <?= date("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.
+        </div>
+        <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web
+            Programming course at RMIT University in Melbourne, Australia.</div>
+        <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
 
+</body>
+    </footer>
     <?php
     debugModule();
     printMyCode();
     ?>
-</body>
-
 <script src="./script.js"></script>
 
 </html>

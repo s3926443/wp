@@ -510,8 +510,40 @@ input[type="submit"]:active {
   width: 130px;
 }
 
+.check-bookings {
+  text-align: center;
+}
+
 #check-button:active {
   background-color: #f8f8f8;
   transform: translateX(3px) translateY(3px);
   box-shadow: 2px 2px #c4c4c4;
 }
+
+.booking-title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-between;
+}
+
+.booking-title h3:first-child, .booking-title h4:nth-child(3) {
+  text-align: start;
+}
+
+.booking-title h3, .booking-title h4 {
+  width: 50%;
+  text-align: end;
+}
+
+.found-booking #check-button {
+  background-color:#00a472 ;
+  box-shadow: 5px 5px #00c78b;
+  align-self:  center;
+}
+
+.found-booking #check-button:active {
+  background-color:#00a472;
+  transform: translateX(3px) translateY(3px);
+  box-shadow: 2px 2px #00c78b;
+}
+

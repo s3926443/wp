@@ -271,6 +271,16 @@ require('./post-validation.php');
     </div>
   </main>
   <footer>
+    <div class="check-bookings">
+      <h3>Check Your Bookings</h3>
+      <form action="currentBookings.php" method="post">
+        <label for="email">Your Email:</label>
+        <input type="text" name="search[email]" id="email" required>
+        <label for="mobile">Your Mobile:</label>
+        <input type="text" name="search[mobile]" id="mobile" required>
+        <input type="submit" value="Find Booking" href="./currentBookings.php" id="check-button">
+      </form>
+    </div>
     <div class="contact-wrapper">
       <div class=" contact">
         <p>Email: Lunardo@Lunardo.com.au</p>
@@ -292,10 +302,11 @@ require('./post-validation.php');
       Programming course at RMIT University in Melbourne, Australia.</div>
     <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
   </footer>
-  <?php 
+  <?php
   debugModule();
   printMyCode();
   ?>
   <script src="./script.js"></script>
 </body>
-</html >
+
+</html>

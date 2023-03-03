@@ -120,11 +120,12 @@ redirectUser();
   </main>
   <footer>
     <div class="check-bookings">
+    <h3>Check Your Bookings</h3>
       <form action="currentBookings.php" method="post">
         <label for="email">Your Email:</label>
-        <input type="text" name="user[email]" id="email" required>
+        <input type="text" name="search[email]" id="email" required>
         <label for="mobile">Your Mobile:</label>
-        <input type="text" name="user[mobile]" id="mobile" required>
+        <input type="text" name="search[mobile]" id="mobile" required>
         <input type="submit" value="Find Booking" href="./currentBookings.php" id="check-button">
       </form>
     </div>

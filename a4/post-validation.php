@@ -52,9 +52,9 @@ function validateBooking()
   $seatsArr = array_values($_POST['seats']);
   for ($i = 0; $i < count($seatsArr); $i++) {
     if (!empty($seatsArr[$i])) {
-     if (!is_int((int)$seatsArr[$i])) {
+      if (!is_int((int) $seatsArr[$i])) {
         $errors['seats']['type'] = "Seats wrong type";
-      } else if ($seatsArr[$i] > 10 || $seatsArr[$i] < 1){
+      } else if ($seatsArr[$i] > 10 || $seatsArr[$i] < 1) {
         $errors['seats']['amount'] = "Seats above 10 or below 1";
       }
     }
@@ -62,7 +62,7 @@ function validateBooking()
 
   $totalSeats = 0;
   for ($i = 0; $i < count($seatsArr); $i++) {
-    $totalSeats += (int)$seatsArr[$i];
+    $totalSeats += (int) $seatsArr[$i];
   }
   if ($totalSeats === 0) {
     $errors['seats']['total'] = "No seats selected";
@@ -78,10 +78,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($postError)) {
     $_SESSION = $_POST;
     makeBooking();
-    header('Location:' . './receipt.php');
+    header('Location:' . './receipt.php'); die;
   } else {
     header('Location: ' . './index.php');
     die();
   }
-} 
+}
 ?>

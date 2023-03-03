@@ -432,12 +432,39 @@ function findBookings()
   $bookingFound = false;
   $fp = fopen('./bookings.txt', 'r');
   while (($line = fgetCSV($fp)) !== false) {
-    if (in_array($_POST['email'], $line) && in_array($_POST['mobile'], $line)) {
+    if (
+      in_array($_POST['search']['email'], $line) === true &&
+      in_array($_POST['search']['mobile'], $line) === true
+    ) {
+      $bookingFound = true;
       echo
-        '<div>
-      
-        </div>';
+        '<form action="'.htmlspecialchars($_SERVER["PHP_SELF"]).'" method="post">
+        <div class="found-booking">
+          <div class="booking-title">
+            <h3>Date Ordered: ' . $line[0] . '</h3>
+            <h3>Movie: ' . movies[$line[4]]['title'] . '</h3>
+            <h4>When: ' . strtoupper($line[5]) . ' ' . $line[6] . '</h4>
+            <h4>Total Price: $' . $line[19] . '</h4>
+          </div> 
+          <input type="hidden" id="' . movies[$line[4]]['title'] . '" name="movie" value="' . $line[4] . '">
+          <input type="hidden" id="seatsSta" name="seats[STA]" value="' . $line[7] . '">
+          <input type="hidden" id="seatsStp" name="seats[STP]" value="' . $line[9] . '">
+          <input type="hidden" id="seatsStc" name="seats[STC]" value="' . $line[11] . '">
+          <input type="hidden" id="seatsFca" name="seats[FCA]" value="' . $line[13] . '">
+          <input type="hidden" id="seatsFcp" name="seats[FCP]" value="' . $line[15] . '">
+          <input type="hidden" id="seatsFcc" name="seats[FCC]" value="' . $line[17] . '">
+          <input type="hidden" name="user[name]" value="' . $line[1] . '">
+          <input type="hidden" name="user[email]" value="' . $line[2] . '">
+          <input type="hidden" name="user[mobile]" value="' . $line[3] . '">
+          <input type="hidden" id="day" name="day" value="' . $line[5] . '">
+          <input type="hidden" id="search" name="search" value="true">
+          <button type="submit" id="check-button" class="get-receipt">Get Receipt</button>
+        </div>
+        </form><hr>';
     }
+  }
+  if ($bookingFound === false) {
+    echo '<h2>No Results Found</h2>';
   }
 }
 ?>
